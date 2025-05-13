@@ -31,6 +31,7 @@ export type Appearance = "card" | "inline" | "horizontal";
 export interface AlertButton {
     label: React.ReactNode;
     onClick: (e?: React.SyntheticEvent) => void;
+    loading?: boolean;
 }
 
 export interface AlertProps extends Omit<React.ComponentProps<"div">, "title"> {
@@ -136,6 +137,7 @@ const renderAlertActionButton = (
             appearance={style === "horizontal" && !isWorkleap ? ghostAppearance : "secondary"}
             size="small"
             onClick={button.onClick}
+            loading={button.loading}
             className="ids-alert__action-btn"
         >
             {button.label}
