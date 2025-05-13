@@ -1,5 +1,11 @@
 # @igloo-ui/alert
 
+## 0.11.0
+
+### Minor Changes
+
+- 8fe5716: Add loading prop to AlertButton
+
 ## 0.10.1
 
 ### Patch Changes
