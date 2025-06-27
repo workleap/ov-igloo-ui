@@ -185,11 +185,11 @@
           --ids-btn-text-premium-pressed: var(--hop-upsell-text-press);
           --ids-btn-text-premium-active: var(--hop-upsell-text-selected);
           --ids-btn-border-premium-active: var(--hop-upsell-border-selected);
-          --ids-btn-background-premium: var(--hop-upsell-surface);
-          --ids-btn-background-premium-hover: var(--hop-upsell-surface-hover);
+          --ids-btn-background-premium: var(--hop-upsell-surface-weak);
+          --ids-btn-background-premium-hover: var(--hop-upsell-surface-weak-hover);
           --ids-btn-background-premium-disabled: var(--hop-neutral-surface-disabled);
           --ids-btn-background-premium-active: var(--hop-upsell-surface-selected);
-          --ids-btn-background-premium-pressed: var(--hop-upsell-surface-press);
+          --ids-btn-background-premium-pressed: var(--hop-upsell-surface-weak-press);
 
           /* Danger */
           --ids-btn-text-danger: var(--hop-danger-text-strong);
