@@ -1,5 +1,11 @@
 # @igloo-ui/input
 
+## 2.3.3
+
+### Patch Changes
+
+- 35e2ada: Prevent conflict of hover/focus states on Input and TextArea
+
 ## 2.3.2
 
 ### Patch Changes

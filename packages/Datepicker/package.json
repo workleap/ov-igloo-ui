@@ -1,6 +1,6 @@
 {
   "name": "@igloo-ui/datepicker",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "main": "dist/Datepicker.js",
   "module": "dist/Datepicker.js",
   "types": "dist/Datepicker.d.ts",
@@ -29,7 +29,7 @@
     "@igloo-ui/dropdown": "^1.9.1",
     "@igloo-ui/icon-button": "^1.4.0",
     "@igloo-ui/icons": "^1.12.2",
-    "@igloo-ui/input": "^2.3.2",
+    "@igloo-ui/input": "^2.3.3",
     "@igloo-ui/tokens": "^2.1.0",
     "@hopper-ui/tokens": "^4.3.2",
     "@internationalized/date": "^3.5.2",

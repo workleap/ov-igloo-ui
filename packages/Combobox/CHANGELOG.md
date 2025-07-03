@@ -1,5 +1,13 @@
 # @igloo-ui/combobox
 
+## 2.6.2
+
+### Patch Changes
+
+- 35e2ada: Update input
+- Updated dependencies [35e2ada]
+  - @igloo-ui/input@2.3.3
+
 ## 2.6.1
 
 ### Patch Changes

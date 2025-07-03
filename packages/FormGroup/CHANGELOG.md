@@ -1,5 +1,11 @@
 # @igloo-ui/form-group
 
+## 1.2.5
+
+### Patch Changes
+
+- 35e2ada: Update input
+
 ## 1.2.4
 
 ### Patch Changes
