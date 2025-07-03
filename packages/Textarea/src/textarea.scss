@@ -60,6 +60,7 @@
 
         /* Focus */
         --ids-textarea-focus-border-color: var(-hop-primary-border-focus);
+        --ids-textarea-focus-background-color: var(--hop-neutral-surface);
 
         /* Hover */
         --ids-textarea-hover-border-color: var(--hop-neutral-border-hover);
@@ -121,14 +122,15 @@
                 box-shadow: var(--ids-textarea-focus-box-shadow);
             }
 
-            &:hover:focus,
-            .ids-textarea--focus:hover & {
-                border-color: var(--ids-textarea-focus-border-color);
-            }
-
             &:hover {
                 background-color: var(--ids-textarea-hover-background-color);
                 border-color: var(--ids-textarea-hover-border-color);
+            }
+
+            &:hover:focus,
+            .ids-textarea--focus:hover & {
+                background-color: var(--ids-textarea-focus-background-color);
+                border-color: var(--ids-textarea-focus-border-color);
             }
 
             &--error {
