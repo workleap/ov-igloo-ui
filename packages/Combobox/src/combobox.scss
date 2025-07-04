@@ -86,7 +86,7 @@
         --ids-combobox-search-border-color-active: var(--hop-primary-border-focus);
 
         /* Focus */
-        --ids-combobox-background-focus: var(--hop-neutral-surface-hover);
+        --ids-combobox-background-focus: var(--hop-neutral-surface);
         --ids-combobox-border-color-focus: var(--hop-neutral-border-hover);
         --ids-combobox-focus: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.219rem var(--hop-primary-border-focus);
 
@@ -150,6 +150,7 @@
         }
 
         &:focus-visible,
+        &:focus-within,
         &.focus {
             background-color: var(--ids-combobox-background-focus);
             border-color: var(--ids-combobox-border-color-focus);
