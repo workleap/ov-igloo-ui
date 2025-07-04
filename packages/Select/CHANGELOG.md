@@ -1,5 +1,11 @@
 # @igloo-ui/select
 
+## 1.9.3
+
+### Patch Changes
+
+- 3c22922: Prevent hover/focus conflicts
+
 ## 1.9.2
 
 ### Patch Changes

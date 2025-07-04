@@ -1,5 +1,11 @@
 # @igloo-ui/text-editor
 
+## 0.9.3
+
+### Patch Changes
+
+- 3c22922: Prevent hover/focus conflicts
+
 ## 0.9.2
 
 ### Patch Changes

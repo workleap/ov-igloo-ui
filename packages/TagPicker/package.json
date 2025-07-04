@@ -1,6 +1,6 @@
 {
   "name": "@igloo-ui/tag-picker",
-  "version": "0.15.2",
+  "version": "0.15.3",
   "main": "dist/TagPicker.js",
   "module": "dist/TagPicker.js",
   "types": "dist/TagPicker.d.ts",
