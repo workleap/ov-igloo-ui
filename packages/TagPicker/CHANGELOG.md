@@ -1,5 +1,11 @@
 # @igloo-ui/tag-picker
 
+## 0.15.3
+
+### Patch Changes
+
+- 3c22922: Prevent hover/focus conflicts
+
 ## 0.15.2
 
 ### Patch Changes
