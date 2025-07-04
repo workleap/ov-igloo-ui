@@ -123,6 +123,7 @@
 
         /* Focus */
         --ids-text-editor-border-color-focus: var(--hop-primary-border-selected);
+        --ids-text-editor-background-focus: var(--hop-neutral-surface);
 
         /* Disabled */
         --ids-text-editor-background-disabled: var(--hop-neutral-surface-disabled);
@@ -224,15 +225,16 @@
             --ids-text-editor-border-color: var(--ids-text-editor-border-color-error);
         }
 
-        &:focus-within {
-            --ids-text-editor-border-color: var(--ids-text-editor-border-color-focus);
-
-            box-shadow: var(--ids-text-editor-focus);
+        &:hover {
+            --ids-text-editor-border-color: var(--ids-text-editor-border-color-hover);
+            --ids-text-editor-background: var(--ids-text-editor-background-hover);
         }
 
-        &:hover {
+        &:focus-within {
             --ids-text-editor-border-color: var(--ids-text-editor-border-color-focus);
-            --ids-text-editor-background: var(--ids-text-editor-background-hover);
+            --ids-text-editor-background: var(--ids-text-editor-background-focus);
+
+            box-shadow: var(--ids-text-editor-focus);
         }
 
         &--disabled,

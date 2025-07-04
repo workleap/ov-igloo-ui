@@ -58,6 +58,7 @@
         --ids-tag-picker-font-family: var(--hop-body-md-font-family);
         --ids-tag-picker-font-size: var(--hop-body-md-font-size);
         --ids-tag-picker-background-hover: var(--hop-neutral-surface-hover);
+        --ids-tag-picker-background-focus: var(--hop-neutral-surface);
         --ids-tag-picker-background-disabled: var(--hop-neutral-surface-disabled);
         --ids-tag-picker-border-disabled: var(--hop-neutral-border-disabled);
         --ids-tag-picker-height: 2.5rem;
@@ -115,16 +116,21 @@
             cursor: not-allowed;
         }
 
-        &:hover:not(.ids-tag-picker--disabled) {
+        &:hover:not(:focus-within):not(.ids-tag-picker--disabled) {
             background-color: var(--ids-tag-picker-background-hover);
         }
 
-        &:hover:not(.ids-tag-picker--disabled, .ids-tag-picker--focused) {
+        &:hover:not(:focus-within):not(.ids-tag-picker--disabled, .ids-tag-picker--focused) {
             border-color: var(--ids-tag-picker-border-color-hover);
         }
 
-        &:hover:not(.ids-tag-picker--disabled) .ids-tag-picker__input {
+        &:hover:not(:focus-within):not(.ids-tag-picker--disabled) .ids-tag-picker__input {
             background-color: var(--ids-tag-picker-background-hover);
+        }
+
+        &:focus-within {
+            background-color: var(--ids-tag-picker-background-focus);
+            border-color: var(--ids-tag-picker-border-color-focus);
         }
 
         .ids-dropdown__container {
