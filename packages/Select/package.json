@@ -1,6 +1,6 @@
 {
     "name": "@igloo-ui/select",
-    "version": "1.9.2",
+    "version": "1.9.3",
     "main": "dist/Select.js",
     "module": "dist/Select.js",
     "types": "dist/Select.d.ts",

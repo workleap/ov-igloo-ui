@@ -1,5 +1,11 @@
 # @igloo-ui/combobox
 
+## 2.6.3
+
+### Patch Changes
+
+- 3c22922: Prevent hover/focus conflicts
+
 ## 2.6.2
 
 ### Patch Changes
