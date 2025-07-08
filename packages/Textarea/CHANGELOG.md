@@ -1,5 +1,11 @@
 # @igloo-ui/textarea
 
+## 0.5.4
+
+### Patch Changes
+
+- 56ae4be: Fix the CSS which contained an invalid CSS variable
+
 ## 0.5.3
 
 ### Patch Changes
