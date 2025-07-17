@@ -2,23 +2,6 @@
 
 @layer igloo {
     :root {
-        --ids-select-option-min-height: #{tokens.$space-5};
-
-        /* Focused */
-        --ids-select-option-background-focused: #{tokens.$electric-blue-50};
-
-        /* Selected */
-        --ids-select-option-background-selected: none;
-
-        /* Disabled */
-        --ids-select-option-color-disabled: #{tokens.$grey-600};
-
-        /* Checkmark */
-        --ids-select-option-checkmark-color: #{tokens.$electric-blue-500};
-        --ids-select-option-checkmark-margin: 0 #{tokens.$space-3} 0 0;
-    }
-
-    [data-brand="workleap"] {
         --ids-select-option-min-height: 2rem;
 
         /* Focused */

@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import tokens from '@igloo-ui/tokens/dist/base10/tokens.json';
 import readme from '../README.md';
 
 import VerticalBarChart from './VerticalBarChart';
@@ -23,14 +22,6 @@ export default {
         <style>
           {`
             :root {
-              --ids-vertical-bar-chart-bar-1: ${tokens.coral400};
-              --ids-vertical-bar-chart-bar-2: ${tokens.coral200};
-              --ids-vertical-bar-chart-bar-3: ${tokens.creamsicle100};
-              --ids-vertical-bar-chart-bar-4: ${tokens.seaweed200};
-              --ids-vertical-bar-chart-bar-5: ${tokens.seaweed400};
-            }
-
-            [data-brand="workleap"] {
               --ids-vertical-bar-chart-bar-1: #FF8E8E;
               --ids-vertical-bar-chart-bar-2: #FFD8BE;
               --ids-vertical-bar-chart-bar-3: #FFF2B8;

@@ -3,25 +3,6 @@
 @layer igloo {
     :root {
         /* Default */
-        --ids-select-value-padding: #{tokens.$space-2} #{tokens.$space-3};
-
-        /* Compact **/
-        --ids-select-value-padding-compact: #{tokens.$space-1} #{tokens.$space-3};
-
-        /* Disabled */
-        --ids-select-value-color-disabled: #{tokens.$grey-500};
-
-        /* Placeholder */
-        --ids-select-value-color-placeholder: #{tokens.$grey-400};
-
-        /* Visual Identifier */
-        --ids-select-value-icon-color: inherit;
-        --ids-select-value-icon-size: #{tokens.$space-3};
-        --ids-select-value-icon-margin-right: #{tokens.$space-2};
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
         --ids-select-value-padding: var(--hop-space-stack-sm) var(--hop-space-inline-md);
 
         /* Compact **/
