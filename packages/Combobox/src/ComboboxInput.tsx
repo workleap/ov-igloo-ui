@@ -65,7 +65,7 @@ const ComboboxInput: React.FunctionComponent<ComboboxInputProps> = ({
 }: ComboboxInputProps) => {
     const chevronClass = "ids-combobox-input__chevron";
     const chevronUpIcon = <AngleUpIcon className={chevronClass} size="sm" />
-    const chevronDownIcon =<AngleDownIcon className={chevronClass} size="sm" />
+    const chevronDownIcon = <AngleDownIcon className={chevronClass} size="sm" />
 
     const handleChange = ({
         target
