@@ -6,46 +6,34 @@
 
 @layer igloo {
     :root {
-    --ids-avatar-border-radius: #{tokens.$border-radius-sm};
-    --ids-avatar-border-radius-xs: #{tokens.$border-radius-xs};
+        --ids-avatar-border-radius: var(--hop-shape-circle);
+        --ids-avatar-border-radius-xs: var(--hop-shape-circle);
 
-    /* Sizes */
-    --ids-avatar-size-xs: #{tokens.$font-size-4};
-    --ids-avatar-size-s: #{tokens.$font-size-7};
-    --ids-avatar-size-m: #{tokens.$font-size-9};
-    --ids-avatar-size-l: #{tokens.$font-size-10};
-    --ids-avatar-size-xl: #{tokens.$space-8};
-    }
-
-    [data-brand="workleap"] {
-    --ids-avatar-border-radius: var(--hop-shape-circle);
-    --ids-avatar-border-radius-xs: var(--hop-shape-circle);
-
-    /* Sizes */
-    --ids-avatar-size-xs: 1rem;
-    --ids-avatar-size-s: 1.5rem;
-    --ids-avatar-size-m: 2rem;
-    --ids-avatar-size-l: 3rem;
-    --ids-avatar-size-xl: 4rem;
+        /* Sizes */
+        --ids-avatar-size-xs: 1rem;
+        --ids-avatar-size-s: 1.5rem;
+        --ids-avatar-size-m: 2rem;
+        --ids-avatar-size-l: 3rem;
+        --ids-avatar-size-xl: 4rem;
     }
 
     .ids-avatar {
-    box-sizing: border-box;
-    display: inline-flex;
-    flex-shrink: 0;
+        box-sizing: border-box;
+        display: inline-flex;
+        flex-shrink: 0;
 
-    // Remove spaces before and after
-    font-size: 0;
+        // Remove spaces before and after
+        font-size: 0;
 
-    &__image {
-        border-radius: var(--ids-avatar-border-radius);
-        max-height: 100%;
-        width: 100%;
+        &__image {
+            border-radius: var(--ids-avatar-border-radius);
+            max-height: 100%;
+            width: 100%;
 
-        &--xsmall {
-        border-radius: var(--ids-avatar-border-radius-xs);
+            &--xsmall {
+            border-radius: var(--ids-avatar-border-radius-xs);
+            }
         }
-    }
 
         &--xsmall {
             height: var(--ids-avatar-size-xs);

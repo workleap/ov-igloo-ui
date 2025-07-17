@@ -7,53 +7,6 @@
 @layer igloo {
     :root {
         // Calculation of the width of the datepicker to obtain a square cell
-      --ids-datepicker-cell-size: #{tokens.$space-6};
-      --ids-datepicker-cell-number: 7;
-      --ids-datepicker-cell-border: .2rem;
-      --ids-datepicker-cell-empty-border: calc(6 * .05rem);
-
-      /* Default */
-      --ids-datepicker-font-family: #{tokens.$primary-font-family};
-      --ids-datepicker-font-size: #{tokens.$font-size-4};
-      --ids-datepicker-width: calc(var(--ids-datepicker-cell-number) * var(--ids-datepicker-cell-size) - var(--ids-datepicker-cell-border) - var(--ids-datepicker-cell-empty-border));
-      --ids-datepicker-color-disabled: #{tokens.$grey-600};
-      --ids-datepicker-table-width: 100%;
-      --ids-datepicker-table-margin: #{tokens.$space-3};
-      --ids-datepicker-table-border: .1rem solid #{tokens.$grey-250};
-      --ids-datepicker-table-border-radius: 0;
-      --ids-datepicker-thead-font-size: #{tokens.$font-size-3};
-      --ids-datepicker-thead-font-weight: 400;
-      --ids-datepicker-thead-line-height: 1.25;
-      --ids-datepicker-thead-color: #{tokens.$electric-blue-500};
-      --ids-datepicker-tbody-outline: 0 solid transparent;
-      --ids-datepicker-tbody-outline-offset: 0;
-      --ids-datepicker-tbody-radius: 0;
-      --ids-datepicker-content-today-outline: none;
-      --ids-datepicker-content-today-outline-offset: 0;
-      --ids-datepicker-thead-space: #{tokens.$space-2};
-      --ids-datepicker-title-font-size: #{tokens.$font-size-5};
-      --ids-datepicker-title-line-height: 1.333;
-      --ids-datepicker-content-color-today: #{tokens.$electric-blue-500};
-      --ids-datepicker-content-background-hover: #{tokens.$electric-blue-600};
-      --ids-datepicker-content-background-pressed: #{tokens.$electric-blue-600};
-      --ids-datepicker-content-color: #{tokens.$black};
-      --ids-datepicker-content-color-hover: #{tokens.$samoyed};
-      --ids-datepicker-content-color-pressed: #{tokens.$samoyed};
-      --ids-datepicker-content-background-selected: #{tokens.$electric-blue-500};
-      --ids-datepicker-content-color-selected: #{tokens.$samoyed};
-      --ids-datepicker-content-line-height: 3.8rem;
-      --ids-datepicker-margin-offset: -0.1rem;
-      --ids-datepicker-content-focus: #{tokens.$electric-blue-600} solid .15rem;
-      --ids-datepicker-content-focus-offset: 0;
-
-      // Disabled state
-      --ids-datepicker-disabled-background-selected: #51a0fa;
-      --ids-datepicker-color-disabled-selected: #{tokens.$samoyed};
-      --ids-datepicker-disabled-table-border: .1rem solid #eff1f5;
-    }
-
-    [data-brand="workleap"] {
-        // Calculation of the width of the datepicker to obtain a square cell
       --ids-datepicker-cell-size: 2.5rem;
       --ids-datepicker-cell-number: 7;
 
@@ -95,6 +48,14 @@
       --ids-datepicker-disabled-background-selected: var(--hop-neutral-surface-disabled);
       --ids-datepicker-color-disabled-selected: var(--hop-neutral-text-disabled);
       --ids-datepicker-disabled-table-border: 0;
+      --ids-datepicker-margin-offset: -0.1rem;
+      --ids-datepicker-content-focus: #{tokens.$electric-blue-600} solid .15rem;
+      --ids-datepicker-content-focus-offset: 0;
+
+      // Disabled state
+      --ids-datepicker-disabled-background-selected: #51a0fa;
+      --ids-datepicker-color-disabled-selected: #{tokens.$samoyed};
+      --ids-datepicker-disabled-table-border: .1rem solid #eff1f5;
     }
 
     %active-date {

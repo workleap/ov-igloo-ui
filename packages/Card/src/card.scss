@@ -6,28 +6,7 @@
 
 @layer igloo {
     :root {
-        /* Default */
-        --ids-card-font-family: #{tokens.$primary-font-family};
-        --ids-card-font-size: #{tokens.$font-size-4};
-        --ids-card-background: #{tokens.$samoyed};
-        --ids-card-border: none;
-        --ids-card-padding-mobile: #{tokens.$space-3};
-        --ids-card-padding: #{tokens.$space-5};
-        --ids-card-shadow: 0 .1rem .6rem rgb(35 48 67 / 10%);
-        --ids-card-radius: #{tokens.$border-radius-sm};
-
-        /* Medium */
-        --ids-card-padding-medium: #{tokens.$space-4};
-
-        /* Small */
-        --ids-card-padding-small: #{tokens.$space-3};
-
-        /* xSmall */
-        --ids-card-padding-xsmall: 0;
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
+  /* Default */
         --ids-card-font-family: var(--hop-body-md-font-family);
         --ids-card-font-size: var(--hop-body-md-font-size);
         --ids-card-background: var(--hop-neutral-surface);

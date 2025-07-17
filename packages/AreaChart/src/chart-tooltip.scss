@@ -4,38 +4,6 @@
 @layer igloo {
     :root {
         /* Default */
-        --ids-chart-tooltip-font-family: #{tokens.$primary-font-family};
-        --ids-chart-tooltip-font-size: #{tokens.$font-size-3};
-        --ids-chart-tooltip-font-weight: #{tokens.$font-weight-regular};
-        --ids-chart-tooltip-color: #{tokens.$grey-800};
-        --ids-chart-tooltip-background: #{tokens.$samoyed};
-        --ids-chart-tooltip-box-shadow: #{tokens.$shadow-12};
-        --ids-chart-tooltip-border-radius: #{tokens.$border-radius-sm};
-        --ids-chart-tooltip-padding: #{tokens.$space-3};
-
-        /* Date */
-        --ids-chart-tooltip-date-font-weight: #{tokens.$font-weight-semi-bold};
-
-        /* Score */
-        --ids-chart-tooltip-score-font-family: #{tokens.$secondary-font-family};
-        --ids-chart-tooltip-score-font-size: #{tokens.$font-size-6};
-        --ids-chart-tooltip-score-font-weight: #{tokens.$font-weight-medium};
-        --ids-chart-tooltip-score-line-height: #{tokens.$line-height-lg};
-        --ids-chart-tooltip-score-margin-top: #{tokens.$space-2};
-        --ids-chart-tooltip-score-value-margin-right: #{tokens.$space-2};
-        --ids-chart-tooltip-score-text-color: #{tokens.$grey-600};
-        --ids-chart-tooltip-score-text-font-size: #{tokens.$font-size-3};
-        --ids-chart-tooltip-score-text-font-weight: #{tokens.$font-weight-regular};
-
-        /* Circle */
-        --ids-chart-tooltip-circle-background: #{tokens.$electric-blue-500};
-        --ids-chart-tooltip-circle-secondary-background: #{tokens.$dandelion-500};
-        --ids-chart-tooltip-circle-margin-right: 1.2rem;
-        --ids-chart-tooltip-circle-size: 0.8rem;
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
         --ids-chart-tooltip-font-family: var(--hop-body-sm-font-family);
         --ids-chart-tooltip-font-size: var(--hop-body-sm-font-size);
         --ids-chart-tooltip-font-weight: var(--hop-body-sm-font-weight);

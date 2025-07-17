@@ -6,33 +6,6 @@
 
 @layer igloo {
     :root {
-        --ids-color-background: var(--ids-color-background);
-        --ids-color-border-radius: #{tokens.$border-radius-sm};
-        --ids-color-border-radius-xs: #{tokens.$border-radius-xs};
-        --ids-color-border-radius-square: #{tokens.$border-radius-sm};
-        --ids-color-border-radius-square-xs: #{tokens.$border-radius-xs};
-        --ids-color-color: var(--ids-color-text, #{tokens.$samoyed});
-        --ids-color-font-family: #{tokens.$secondary-font-family};
-        --ids-color-font-size: #{tokens.$font-size-4};
-        --ids-color-font-size-large: #{tokens.$font-size-4};
-        --ids-color-font-size-medium: #{tokens.$font-size-3};
-        --ids-color-font-size-small: #{tokens.$font-size-3};
-        --ids-color-font-weight: #{tokens.$font-weight-medium};
-
-        /* Sizes */
-        --ids-color-size-s: #{tokens.$font-size-3};
-        --ids-color-size-m: #{tokens.$font-size-4};
-        --ids-color-size-l: #{tokens.$font-size-7};
-        --ids-color-size-xl: #{tokens.$font-size-9};
-
-        /* Square */
-        --ids-color-padding-square-s: calc(#{tokens.$space-1} / 4);
-        --ids-color-padding-square-m: calc(#{tokens.$space-1} / 4);
-        --ids-color-padding-square-l: #{tokens.$space-1};
-        --ids-color-padding-square-xl: 0.6rem;
-    }
-
-    [data-brand="workleap"] {
         --ids-color-border-radius: var(--hop-shape-circle);
         --ids-color-border-radius-xs: var(--hop-shape-circle);
         --ids-color-border-radius-square: var(--hop-shape-rounded-sm);

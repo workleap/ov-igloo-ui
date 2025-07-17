@@ -3,14 +3,12 @@ import * as React from "react";
 import cx from "classnames";
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { VisualIdentifier } from "@shared/components";
-import ChevronUp from "@igloo-ui/icons/dist/TableChevronSelectedUp";
-import ChevronDown from "@igloo-ui/icons/dist/TableChevronSelectedDown";
+import { AngleDownIcon, AngleUpIcon, DismissIcon } from "@hopper-ui/icons-react16";
 import IconButton from "@igloo-ui/icon-button";
 import Search from "@igloo-ui/icons/dist/Search";
-import Tooltip from "@igloo-ui/tooltip";
 import Input from "@igloo-ui/input";
-import { AngleDownIcon, AngleUpIcon, DismissIcon } from "@hopper-ui/icons-react16";
+import Tooltip from "@igloo-ui/tooltip";
+import { VisualIdentifier } from "@shared/components";
 
 import "./combobox-input.scss";
 
@@ -47,10 +45,6 @@ export interface ComboboxInputProps extends React.ComponentProps<"div"> {
     value?: string;
 }
 
-const getBrand = (): string => {
-    return document.documentElement.getAttribute("data-brand") ?? "igloo";
-};
-
 const ComboboxInput: React.FunctionComponent<ComboboxInputProps> = ({
     clear = false,
     clearTooltipText,
@@ -69,14 +63,9 @@ const ComboboxInput: React.FunctionComponent<ComboboxInputProps> = ({
     value,
     ...rest
 }: ComboboxInputProps) => {
-    const isWorkleap = getBrand() === "workleap";
     const chevronClass = "ids-combobox-input__chevron";
-    const chevronUpIcon = isWorkleap ?
-        <AngleUpIcon className={chevronClass} size="sm" /> :
-        <ChevronUp className={chevronClass} size="small" />;
-    const chevronDownIcon = isWorkleap ?
-        <AngleDownIcon className={chevronClass} size="sm" /> :
-        <ChevronDown className={chevronClass} size="small" />;
+    const chevronUpIcon = <AngleUpIcon className={chevronClass} size="sm" />
+    const chevronDownIcon =<AngleDownIcon className={chevronClass} size="sm" />
 
     const handleChange = ({
         target
