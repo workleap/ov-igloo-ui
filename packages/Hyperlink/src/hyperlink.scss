@@ -7,35 +7,6 @@
 @layer igloo {
     :root {
         /* Default */
-        --ids-link-font-family: #{tokens.$primary-font-family};
-        --ids-link-font-size: #{tokens.$font-size-4};
-        --ids-link-font-size-small: #{tokens.$font-size-3};
-        --ids-link-font-size-xsmall: #{tokens.$font-size-2};
-        --ids-link-font-weight: #{tokens.$font-weight-medium};
-        --ids-link-icon-color: currentcolor;
-        --ids-link-icon-margin: #{tokens.$space-1};
-        --ids-link-icon-padding-top: 0.2rem;
-        --ids-link-focus: #{tokens.$focus};
-        --ids-link-border-radius: #{tokens.$border-radius-sm};
-
-        /* Primary */
-        --ids-link-text-primary: #{tokens.$electric-blue-500};
-        --ids-link-text-primary-hover: #{tokens.$electric-blue-600};
-        --ids-link-text-primary-pressed: #{tokens.$electric-blue-600};
-
-        /* Secondary */
-        --ids-link-text-secondary: #{tokens.$grey-600};
-        --ids-link-text-secondary-hover: #{tokens.$grey-700};
-        --ids-link-text-secondary-pressed: #{tokens.$grey-700};
-
-        /* Danger */
-        --ids-link-text-danger: #{tokens.$coral-500};
-        --ids-link-text-danger-hover: #{tokens.$coral-600};
-        --ids-link-text-danger-pressed: #{tokens.$coral-600};
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
         --ids-link-font-family: var(--hop-body-sm-medium-font-family);
         --ids-link-font-size: var(--hop-body-md-medium-font-size);
         --ids-link-font-size-small: var(--hop-body-sm-medium-font-size);

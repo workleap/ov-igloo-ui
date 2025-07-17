@@ -1,11 +1,10 @@
-import * as React from "react";
 import cx from "classnames";
+import * as React from "react";
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { VisualIdentifier, type Size } from "@shared/components";
-import UserSolid from "@igloo-ui/icons/dist/UserSolid";
-import Checkmark from "@igloo-ui/icons/dist/Checkmark";
 import { UserIcon } from "@hopper-ui/icons-react16";
+import Checkmark from "@igloo-ui/icons/dist/Checkmark";
+import { VisualIdentifier, type Size } from "@shared/components";
 
 import "./list-item.scss";
 
@@ -78,10 +77,6 @@ export interface ListItemProps extends React.ComponentProps<"li"> {
     useCheckbox?: boolean;
 }
 
-const getBrand = (): string => {
-    return document.documentElement.getAttribute("data-brand") ?? "igloo";
-};
-
 const ListItem: React.FunctionComponent<ListItemProps> = ({
     className,
     disableTabbing = false,
@@ -98,7 +93,6 @@ const ListItem: React.FunctionComponent<ListItemProps> = ({
     useCheckbox,
     ...rest
 }: ListItemProps) => {
-    const isWorkleap = getBrand() === "workleap";
     const noDescription = option?.type === "list" ? !option?.description : !option?.role;
 
     const isOptionDisabled = (): boolean => {
@@ -194,11 +188,7 @@ const ListItem: React.FunctionComponent<ListItemProps> = ({
         <>
             <span className="ids-list-item__text-member">
                 {option?.member}
-                {option?.manager && (
-                    isWorkleap ?
-                        <UserIcon size="sm" className="ids-list-item__manager" /> :
-                        <UserSolid size="small" className="ids-list-item__manager" />
-                )}
+                {option?.manager && (<UserIcon size="sm" className="ids-list-item__manager" />)}
             </span>
             {option?.role && (
                 <span className="ids-list-item__text-role">{option.role}</span>

@@ -6,20 +6,7 @@
 
 @layer igloo {
     :root {
-        /* Default */
-        --ids-progress-bar-height: #{tokens.$space-2};
-        --ids-progress-bar-radius: #{tokens.$space-1};
-        --ids-progress-bar-background: #{tokens.$grey-200};
-        --ids-progress-bar-background-progress: #{tokens.$electric-blue-500};
-        --ids-progress-bar-background-completed: #{tokens.$seaweed-500};
-
-        /* Compact */
-        --ids-progress-bar-height-compact: #{tokens.$space-1};
-        --ids-progress-bar-radius-compact: calc(#{tokens.$space-1} / 2);
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
+         /* Default */
         --ids-progress-bar-height: 0.5rem;
         --ids-progress-bar-radius: var(--hop-shape-rounded-sm);
         --ids-progress-bar-background: var(--hop-neutral-surface-weak);

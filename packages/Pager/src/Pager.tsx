@@ -1,19 +1,14 @@
-import * as React from "react";
-import cx from "classnames";
 import ChevronLeft from "@igloo-ui/icons/dist/ChevronLeft";
 import ChevronRight from "@igloo-ui/icons/dist/ChevronRight";
+import cx from "classnames";
+import * as React from "react";
 
-import { usePagination, JUMPPREV, JUMPNEXT } from "./usePagination";
-import { EllipsisIcon } from "./svgs";
-import intlMessages from "./intl";
 import { useLocalizedStringFormatter } from "@igloo-ui/provider";
+import intlMessages from "./intl";
+import { EllipsisIcon } from "./svgs";
+import { JUMPNEXT, JUMPPREV, usePagination } from "./usePagination";
 
 import "./pager.scss";
-
-
-const getBrand = (): string => {
-    return document.documentElement.getAttribute("data-brand") ?? "igloo";
-};
 
 export interface PagerProps extends React.ComponentProps<"div"> {
     /** Add a specific class to the pager component */
@@ -50,7 +45,6 @@ const Pager: React.FunctionComponent<PagerProps> = ({
     ...rest
 }: PagerProps) => {
     const stringFormatter = useLocalizedStringFormatter(intlMessages);
-    const isWorkleap = getBrand() === "workleap";
     const paginationRange = usePagination({
         currentPage,
         pageSize,
@@ -87,13 +81,6 @@ ${stringFormatter.format("of")} ${totalCount}`;
     const renderPrevNext = (type: string): React.ReactNode => {
         const isPrev = type === "prev";
         const isDisabled = isPrev ? currentPage === 1 : currentPage === lastPage;
-        const ChevronLeftIcon = isWorkleap ?
-            <ChevronLeft size="medium" /> :
-            <ChevronLeft size="small" />;
-
-        const ChevronRightIcon = isWorkleap ?
-            <ChevronRight size="medium" /> :
-            <ChevronRight size="small" />;
 
         return (
             <li className="ids-pager__item">
@@ -105,8 +92,8 @@ ${stringFormatter.format("of")} ${totalCount}`;
                         stringFormatter.format("goToPreviousPage") :
                         stringFormatter.format("goToNextPage")}
                 >
-                    {isPrev && ChevronLeftIcon}
-                    {!isPrev && ChevronRightIcon}
+                    {isPrev && <ChevronLeft size="medium" />}
+                    {!isPrev && <ChevronRight size="medium" />}
                 </button>
             </li>
         );

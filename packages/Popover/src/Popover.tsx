@@ -83,10 +83,6 @@ const Popover: React.FunctionComponent<PopoverProps> = ({
     const classes = cx("ids-popover__container", className);
     const stringFormatter = useLocalizedStringFormatter(intlMessages);
 
-    const getBrand = (): string => {
-        return document.documentElement.getAttribute("data-brand") ?? "igloo";
-    };
-
     const [show, setShow] = React.useState<boolean>(active);
 
     const showPopover = !disabled && show;
@@ -157,7 +153,7 @@ const Popover: React.FunctionComponent<PopoverProps> = ({
 
     const popoverClasses = cx("ids-popover", popoverClassName);
 
-    const fromPxToRem = (value: number, base = (getBrand() === "workleap" ? 16 : 10)): string =>
+    const fromPxToRem = (value: number, base = 16): string =>
         `${value / base}rem`;
 
     const popoverContent = (

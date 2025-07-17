@@ -1,11 +1,9 @@
-import * as React from "react";
 import cx from "classnames";
+import * as React from "react";
 
-import ArrowUp from "@igloo-ui/icons/dist/ArrowUp";
-import ArrowDown from "@igloo-ui/icons/dist/ArrowDown";
-import { ArrowUpIcon, ArrowDownIcon } from "@hopper-ui/icons-react16";
+import { ArrowDownIcon, ArrowUpIcon } from "@hopper-ui/icons-react16";
 
-import { useLocalizedStringFormatter, useLocale } from "@igloo-ui/provider";
+import { useLocale, useLocalizedStringFormatter } from "@igloo-ui/provider";
 import intlMessages from "./intl";
 
 import "./score.scss";
@@ -33,10 +31,6 @@ const sizeMap = {
     large: "lg"
 } as const;
 
-const getBrand = (): string => {
-    return document.documentElement.getAttribute("data-brand") ?? "igloo";
-};
-
 const Score: React.FunctionComponent<ScoreProps> = ({
     arrowSize = "small",
     className,
@@ -49,8 +43,6 @@ const Score: React.FunctionComponent<ScoreProps> = ({
     const stringFormatter = useLocalizedStringFormatter(intlMessages);
     const { locale } = useLocale();
 
-    const isWorkleap = getBrand() === "workleap";
-
     const arrowPositiveClass = cx("ids-score__arrow", "ids-score__arrow--positive", {
         "ids-score__arrow--selected": isSelected
     });
@@ -58,14 +50,6 @@ const Score: React.FunctionComponent<ScoreProps> = ({
     const arrowNegativeClass = cx("ids-score__arrow", "ids-score__arrow--negative", {
         "ids-score__arrow--selected": isSelected
     });
-
-    const ArrowUpIconElement = isWorkleap ?
-        <ArrowUpIcon className={arrowPositiveClass} size={sizeMap[arrowSize]} /> :
-        <ArrowUp className={arrowPositiveClass} size={arrowSize} />;
-
-    const ArrowDownIconElement = isWorkleap ?
-        <ArrowDownIcon className={arrowNegativeClass} size={sizeMap[arrowSize]} /> :
-        <ArrowDown className={arrowNegativeClass} size={arrowSize} />;
 
     if (!isVariation && (value === undefined || value === null)) {
         return <span
@@ -86,9 +70,9 @@ const Score: React.FunctionComponent<ScoreProps> = ({
     }
 
     const arrow = isNegative ? (
-        ArrowDownIconElement
+        <ArrowDownIcon className={arrowNegativeClass} size={sizeMap[arrowSize]} />
     ) : (
-        ArrowUpIconElement
+        <ArrowUpIcon className={arrowPositiveClass} size={sizeMap[arrowSize]} />
     );
 
     let postFix = absoluteValue === 1 ?

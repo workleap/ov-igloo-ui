@@ -9,18 +9,7 @@
 
 @layer igloo {
     :root {
-        /* Default */
-        --ids-list-font-family: #{tokens.$primary-font-family};
-        --ids-list-font-size: #{tokens.$font-size-3};
-        --ids-list-font-weight: #{tokens.$font-weight-regular};
-        --ids-list-color: #{tokens.$grey-800};
-        --ids-list-line-height: #{tokens.$line-height-xxl};
-        --ids-list-min-width: 20rem;
-        --ids-list-padding: #{tokens.$space-2} 0;
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
+         /* Default */
         --ids-list-font-family: var(--hop-body-sm-font-family);
         --ids-list-font-size: var(--hop-body-sm-font-size);
         --ids-list-font-weight: var(--hop-body-sm-font-weight);
