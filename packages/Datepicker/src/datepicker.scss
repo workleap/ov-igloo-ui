@@ -48,14 +48,6 @@
       --ids-datepicker-disabled-background-selected: var(--hop-neutral-surface-disabled);
       --ids-datepicker-color-disabled-selected: var(--hop-neutral-text-disabled);
       --ids-datepicker-disabled-table-border: 0;
-      --ids-datepicker-margin-offset: -0.1rem;
-      --ids-datepicker-content-focus: #{tokens.$electric-blue-600} solid .15rem;
-      --ids-datepicker-content-focus-offset: 0;
-
-      // Disabled state
-      --ids-datepicker-disabled-background-selected: #51a0fa;
-      --ids-datepicker-color-disabled-selected: #{tokens.$samoyed};
-      --ids-datepicker-disabled-table-border: .1rem solid #eff1f5;
     }
 
     %active-date {
