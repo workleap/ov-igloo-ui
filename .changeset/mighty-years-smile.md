@@ -19,6 +19,5 @@
 "@igloo-ui/dialog": minor
 ---
 
-## Clean up Workleap rebrand
-
+Clean up non-Workleap rebranded styles for components A-D.
 All consumers should now be using the Workleap branded versions of the components. This will happen automatically, and consumers can stop setting `data-brand="workleap"` for these components.
