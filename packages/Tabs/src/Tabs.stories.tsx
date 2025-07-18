@@ -3,8 +3,8 @@ import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 
 import Section from '@components/section';
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import readme from '../README.md';
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 
 import Tabs from './Tabs';
 
@@ -18,6 +18,9 @@ export default {
       }
     }
   },
+  globals: {
+    brand: "workleap"
+  }
 } as Meta<typeof Tabs>;
 
 const Template: StoryFn<typeof Tabs> = (args) => {

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
-import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
+import { Meta, StoryObj } from '@storybook/react';
+import { userEvent, within } from '@storybook/testing-library';
 
 import Happiness from '@igloo-ui/icons/dist/Happiness';
 import Lock from '@igloo-ui/icons/dist/Lock';
@@ -35,6 +35,9 @@ export default {
             </div>
         ),
     ],
+    globals: {
+        brand: "workleap"
+    }
 } as Meta<typeof Select>;
 
 const selectPlaceholder = 'ex: Lorem ipsum dolor';

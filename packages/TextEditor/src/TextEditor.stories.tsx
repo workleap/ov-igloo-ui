@@ -19,6 +19,9 @@ export default {
       },
     },
   },
+  globals: {
+    brand: "workleap"
+  }
 } as Meta<typeof TextEditor>;
 
 type Story = StoryObj<typeof TextEditor>;

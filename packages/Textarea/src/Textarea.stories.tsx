@@ -24,6 +24,9 @@ export default {
       },
     },
   },
+  globals: {
+    brand: "workleap"
+  }
 } as Meta<typeof Textarea>;
 
 const Template: StoryFn<typeof Textarea> = (args) => {

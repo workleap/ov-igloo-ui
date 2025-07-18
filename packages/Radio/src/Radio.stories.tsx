@@ -23,6 +23,9 @@ export default {
     checked: { table: { defaultValue: { summary: false } } },
     small: { table: { defaultValue: { summary: false } } },
   },
+  globals: {
+    brand: "workleap"
+  }
 } as Meta<typeof Radio>;
 
 const Template: StoryFn<typeof Radio> = (args) => {

@@ -34,6 +34,9 @@ export default {
       </>
     ),
   ],
+  globals: {
+    brand: "workleap"
+  }
 } as Meta<typeof VerticalBarChart>;
 
 type Story = StoryObj<typeof VerticalBarChart>;

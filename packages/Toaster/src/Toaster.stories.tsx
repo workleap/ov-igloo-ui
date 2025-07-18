@@ -1,12 +1,12 @@
-import React from 'react';
 import Button from '@igloo-ui/button';
+import React from 'react';
 
 import { Meta } from '@storybook/react';
 
 import ChromaticWrapper from '@components/chromaticWrapper';
 
-import Toaster, { toast } from './Toaster';
 import Toast from './Toast';
+import Toaster, { toast } from './Toaster';
 
 import readme from '../README.md';
 
@@ -33,6 +33,9 @@ export default {
       </div>
     ),
   ],
+  globals: {
+    brand: "workleap"
+  }
 } as Meta<typeof Toast>;
 
 export const Overview = {

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta } from '@storybook/react';
 
-import Tag from '@igloo-ui/tag';
 import BarGraph from '@igloo-ui/icons/dist/BarGraph';
+import Tag from '@igloo-ui/tag';
 
 import Section from '@components/section';
 import readme from '../README.md';
@@ -31,6 +31,9 @@ export default {
       </div>
     ),
   ],
+  globals: {
+    brand: "workleap"
+  }
 } as Meta<typeof StackedBar>;
 
 export const Overview = {
