@@ -18,10 +18,8 @@ export default {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       },
     },
+    brand: "workleap",
   },
-  globals: {
-    brand: "workleap"
-  }
 } as Meta<typeof TextEditor>;
 
 type Story = StoryObj<typeof TextEditor>;

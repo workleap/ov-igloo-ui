@@ -27,6 +27,7 @@ export default {
       }
     },
     chromatic: { disableSnapshot: true },
+    brand: "workleap"
   },
   args: {
     children: 'Playground tooltip',
@@ -60,10 +61,7 @@ export default {
         {Story()}
       </div>
     )},
-  ],
-  globals: {
-    brand: "workleap"
-  }
+  ]
 } as Meta<typeof Tooltip>;
 
 export const Overview = {

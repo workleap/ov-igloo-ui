@@ -18,7 +18,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap",
   },
   decorators: [
     (Story) => (
@@ -30,10 +31,7 @@ export default {
         {Story()}
       </div>
     ),
-  ],
-  globals: {
-    brand: "workleap"
-  }
+  ]
 } as Meta<typeof StackedBar>;
 
 export const Overview = {

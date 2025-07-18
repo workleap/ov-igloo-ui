@@ -16,16 +16,14 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap",
   },
   argTypes: {
     disabled: { table: { defaultValue: { summary: false } } },
     checked: { table: { defaultValue: { summary: false } } },
     small: { table: { defaultValue: { summary: false } } },
   },
-  globals: {
-    brand: "workleap"
-  }
 } as Meta<typeof Radio>;
 
 const Template: StoryFn<typeof Radio> = (args) => {

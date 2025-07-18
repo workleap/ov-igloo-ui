@@ -17,7 +17,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap",
   },
   decorators: [
     (Story) => (
@@ -30,9 +31,6 @@ export default {
       </div>
     ),
   ],
-  globals: {
-    brand: "workleap"
-  }
 } as Meta<typeof TagPicker>;
 
 const Template: StoryFn<typeof TagPicker> = (args) => {

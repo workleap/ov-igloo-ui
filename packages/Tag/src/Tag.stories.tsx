@@ -16,7 +16,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap",
   },
   argTypes: {
     size: {
@@ -48,9 +49,6 @@ export default {
         'select'
       ],
     },
-  },
-  globals: {
-    brand: "workleap"
   }
 } as Meta<typeof Tag>;
 

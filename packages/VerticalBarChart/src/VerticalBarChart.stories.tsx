@@ -15,6 +15,7 @@ export default {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       },
     },
+    brand: "workleap"
   },
   decorators: [
     (Story) => (
@@ -33,10 +34,7 @@ export default {
         <Story />
       </>
     ),
-  ],
-  globals: {
-    brand: "workleap"
-  }
+  ]
 } as Meta<typeof VerticalBarChart>;
 
 type Story = StoryObj<typeof VerticalBarChart>;

@@ -15,7 +15,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap",
   },
   argTypes: {
     value: {
@@ -24,9 +25,6 @@ export default {
       },
     },
   },
-  globals: {
-    brand: "workleap"
-  }
 } as Meta<typeof Textarea>;
 
 const Template: StoryFn<typeof Textarea> = (args) => {
