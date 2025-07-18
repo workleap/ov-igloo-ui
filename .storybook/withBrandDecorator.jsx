@@ -1,19 +1,12 @@
-import React from 'react';
+import { useEffect } from 'react';
 
-export const withBrandDecorator = (StoryFn, context) => (
-    <BrandProvider brand={context.parameters.brand ?? context.globals.brand} >
-        {StoryFn()}
-    </BrandProvider>
-)
-
-export const BrandProvider = ({brand, children}) => {
-    const [internalBrand, setInternalBrand] = React.useState();
-
-    React.useEffect(() => {
+export const withBrandDecorator = (StoryFn, context) => {
+    useEffect(() => {
+        const brand = context.parameters.brand ?? context.globals.brand
         //document.documentElement refers to html tag inside iframe#storybook-preview-iframe
         document.documentElement.setAttribute('data-brand', brand);
-        setInternalBrand(brand)
-    }, [brand]);
+    }, [context.parameters.brand, context.globals.brand]);
 
-    return <React.Fragment key={internalBrand}>{children}</React.Fragment>;
+
+    return <StoryFn {...context} />;
 }
