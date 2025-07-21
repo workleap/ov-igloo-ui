@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import Button from '@igloo-ui/button';
 import Reminder from '@igloo-ui/icons/dist/Reminder';
@@ -385,33 +385,29 @@ export const TextIconAndHelperText = () => {
   );
 };
 
-export const Action: StoryObj<typeof List> = {
-    parameters: {
-        brand: "workleap"
-    },
-    render: () => {
-        const [selectedOption, setSelectedOption] = React.useState<OptionType | null>();
-        const [focusedOption, setFocusedOption] = React.useState<OptionType | null>();
+export const Action = () => {
+    const [selectedOption, setSelectedOption] = React.useState<OptionType | null>();
+    const [focusedOption, setFocusedOption] = React.useState<OptionType | null>();
 
-        function handleOptionSelect(option: OptionType) {
-            setSelectedOption(option);
-        }
-
-        function handleOptionFocus(option: OptionType) {
-            setFocusedOption(option);
-        }
-
-        return (
-            <List options={listWithAction}
-            onOptionChange={handleOptionSelect}
-            onOptionFocus={handleOptionFocus}
-            onOptionBlur={() => setFocusedOption(undefined)}
-            selectedOption={selectedOption}
-            focusedOption={focusedOption}
-            style={{ maxWidth: '40rem' }} />
-        );
+    function handleOptionSelect(option: OptionType) {
+        setSelectedOption(option);
     }
+
+    function handleOptionFocus(option: OptionType) {
+        setFocusedOption(option);
+    }
+
+    return (
+        <List options={listWithAction}
+        onOptionChange={handleOptionSelect}
+        onOptionFocus={handleOptionFocus}
+        onOptionBlur={() => setFocusedOption(undefined)}
+        selectedOption={selectedOption}
+        focusedOption={focusedOption}
+        style={{ maxWidth: '40rem' }} />
+    );
 };
+
 
 export const Loading = () => {
   return (

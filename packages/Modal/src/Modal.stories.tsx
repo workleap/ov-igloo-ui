@@ -154,8 +154,7 @@ export const WithSelect = () => {
         </Modal>
         </ChromaticWrapper>
     );
-}
-
+};
 
 export const Example = {
   render: () => {
