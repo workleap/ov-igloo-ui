@@ -2,17 +2,17 @@ import React from 'react';
 
 import { Meta, StoryFn } from '@storybook/react';
 
-import UnorderedList from '@igloo-ui/icons/dist/UnorderedList';
-import Tree from '@igloo-ui/icons/dist/Tree';
 import IconNumbers from '@igloo-ui/icons/dist/Numbers';
 import IconPercentage from '@igloo-ui/icons/dist/Percentage';
 import IconSuccess from '@igloo-ui/icons/dist/Success';
+import Tree from '@igloo-ui/icons/dist/Tree';
+import UnorderedList from '@igloo-ui/icons/dist/UnorderedList';
 
 import Section from '@components/section';
 import readme from '../README.md';
 
-import ButtonGroup, { ButtonItem } from './ButtonGroup';
 import Tooltip from "@igloo-ui/tooltip";
+import ButtonGroup, { ButtonItem } from './ButtonGroup';
 
 const meta: Meta<typeof ButtonGroup> = {
     title: 'Components/ButtonGroup',
@@ -22,7 +22,8 @@ const meta: Meta<typeof ButtonGroup> = {
             description: {
                 component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
             }
-        }
+        },
+        brand: "workleap"
     }
 };
 

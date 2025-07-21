@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import { DateTime } from 'luxon';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { userEvent, within } from '@storybook/testing-library';
+import { DateTime } from 'luxon';
 
 import Datepicker from './Datepicker';
 
@@ -18,6 +18,7 @@ export default {
                 component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
             },
         },
+        brand: "workleap"
     },
     argTypes: {
         selectedDay: {

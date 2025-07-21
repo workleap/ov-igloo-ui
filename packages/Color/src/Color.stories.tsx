@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import variables from '@igloo-ui/tokens/dist/base10/tokens.json';
 import Section from '@components/section';
+import variables from '@igloo-ui/tokens/dist/base10/tokens.json';
 import readme from '../README.md';
 
 import Color from './Color';
@@ -39,7 +39,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   },
   argTypes: {
     children: {
