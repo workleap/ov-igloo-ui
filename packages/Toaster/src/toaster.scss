@@ -6,30 +6,6 @@
 
 @layer igloo {
     :root {
-        /* Default */
-        --ids-toaster-font-family: #{tokens.$primary-font-family};
-        --ids-toaster-font-size: #{tokens.$font-size-3};
-        --ids-toaster-font-weight: #{tokens.$font-weight-medium};
-        --ids-toaster-text: #{tokens.$grey-800};
-        --ids-toaster-inset: 0 0 auto 0;
-        --ids-toaster-padding: #{tokens.$space-2} #{tokens.$space-2} calc(#{tokens.$space-2} + #{tokens.$space-1}) #{tokens.$space-2};
-        --ids-toaster-gap: #{tokens.$space-2};
-        --ids-toaster-max-width: 60rem;
-        --ids-toaster-border-radius: 0;
-        --ids-toaster-shadow: #{tokens.$shadow-12};
-        --ids-toaster-background: #{tokens.$samoyed};
-        --ids-toaster-status-height: #{tokens.$space-1};
-        --ids-toaster-status-color: #{tokens.$seaweed-500};
-        --ids-toaster-status-icon-size: #{tokens.$space-4};
-
-        /* Error */
-        --ids-toaster-status-color-error: #{tokens.$coral-500};
-
-        /* Overlay */
-        --ids-toaster-z-index: #{tokens.$z-index-max};
-    }
-
-    [data-brand="workleap"] {
         --ids-toaster-font-family: var(--hop-body-md-medium-font-family);
         --ids-toaster-font-size: var(--hop-body-md-medium-font-size);
         --ids-toaster-font-weight: var(--hop-body-md-medium-font-weight);
@@ -222,14 +198,6 @@
 
     @media (width >= #{tokens.$breakpoints-sm}) {
         :root {
-            --ids-toaster-font-size: #{tokens.$font-size-4};
-            --ids-toaster-font-weight: #{tokens.$font-weight-bold};
-            --ids-toaster-inset: #{tokens.$space-3} 0 auto 0;
-            --ids-toaster-border-radius: #{tokens.$border-radius-sm};
-            --ids-toaster-padding: #{tokens.$space-3} #{tokens.$space-3} calc(#{tokens.$space-3} + #{tokens.$space-1}) #{tokens.$space-3};
-        }
-
-        [data-brand="workleap"] {
             --ids-toaster-font-size: var(--hop-body-md-medium-font-size);
             --ids-toaster-font-weight: var(--hop-body-md-medium-font-weight);
             --ids-toaster-inset: var(--hop-space-stack-md) 0 auto 0;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
-import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
+import { Meta, StoryObj } from '@storybook/react';
+import { userEvent, within } from '@storybook/testing-library';
 
 import Happiness from '@igloo-ui/icons/dist/Happiness';
 import Lock from '@igloo-ui/icons/dist/Lock';
@@ -22,7 +22,8 @@ export default {
             description: {
                 component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
             }
-        }
+        },
+        brand: "workleap",
     },
     decorators: [
         (Story) => (
@@ -34,7 +35,7 @@ export default {
                 {Story()}
             </div>
         ),
-    ],
+    ]
 } as Meta<typeof Select>;
 
 const selectPlaceholder = 'ex: Lorem ipsum dolor';

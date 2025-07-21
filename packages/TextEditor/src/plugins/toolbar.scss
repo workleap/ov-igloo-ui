@@ -3,29 +3,6 @@
 
 :root {
     /* Default */
-    --ids-toolbar-font-family: #{tokens.$primary-font-family};
-    --ids-toolbar-font-size: #{tokens.$font-size-3};
-    --ids-toolbar-border-color: #{tokens.$grey-200};
-    --ids-toolbar-border-width: 0.1rem;
-    --ids-toolbar-padding: #{tokens.$space-1} #{tokens.$space-3};
-
-    /* Disabled */
-    --ids-toolbar-border-color-disabled: #{tokens.$grey-300};
-
-    /* Buttons */
-    --ids-toolbar-btn-margin: #{tokens.$space-1};
-    --ids-toolbar-btn-color: #{tokens.$grey-600};
-    --ids-toolbar-btn-color-disabled: #{tokens.$grey-600};
-
-    /* Divider */
-    --ids-toolbar-divider-color: #{tokens.$grey-300};
-    --ids-toolbar-divider-color-disabled: #{tokens.$grey-300};
-    --ids-toolbar-divider-height: #{tokens.$space-3};
-    --ids-toolbar-divider-width: 0.1rem;
-}
-
-[data-brand="workleap"] {
-    /* Default */
     --ids-toolbar-font-family: var(--hop-body-sm-font-family);
     --ids-toolbar-font-size: var(--hop-body-sm-font-size);
     --ids-toolbar-border-color: var(--hop-neutral-border-weak);

@@ -54,29 +54,23 @@ exports[`Toast It should open and close without error and render a snapshot when
       </div>
       <button
         aria-label="Close"
-        class="ids-btn ids-icon-btn ids-icon-btn--medium ids-toast__close ids-btn--ghost-secondary"
-        title=""
-        type="button"
+        class="ids-toast__close-button"
       >
-        <span
-          class=""
+        <svg
+          class="ids-icon"
+          fill="none"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            class="ids-icon"
-            fill="none"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M16.216 17.276a.75.75 0 0 0 1.06-1.06L13.062 12l4.216-4.216a.75.75 0 0 0-1.06-1.06L12 10.938 7.784 6.723a.75.75 0 0 0-1.06 1.06L10.938 12l-4.216 4.216a.75.75 0 1 0 1.061 1.06L12 13.06l4.216 4.216Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </span>
+          <path
+            clip-rule="evenodd"
+            d="M16.216 17.276a.75.75 0 0 0 1.06-1.06L13.062 12l4.216-4.216a.75.75 0 0 0-1.06-1.06L12 10.938 7.784 6.723a.75.75 0 0 0-1.06 1.06L10.938 12l-4.216 4.216a.75.75 0 1 0 1.061 1.06L12 13.06l4.216 4.216Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
       </button>
       <div
         class="ids-toast__progress-indicator"

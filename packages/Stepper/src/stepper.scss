@@ -7,21 +7,6 @@
 @layer igloo {
     :root {
         /* Default */
-        --ids-stepper-font-family: #{tokens.$primary-font-family};
-        --ids-stepper-font-size: #{tokens.$font-size-4};
-
-        /* Divider */
-        --ids-stepper-divider-background: #{tokens.$grey-300};
-        --ids-stepper-divider-border-radius: 1rem;
-        --ids-stepper-divider-height: 0.2rem;
-        --ids-stepper-divider-margin: 0 #{tokens.$space-2};
-        --ids-stepper-divider-width: 5rem;
-        --ids-stepper-divider-background-completed: #{tokens.$electric-blue-500};
-        --ids-stepper-divider-height-completed: #{tokens.$space-1};
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
         --ids-stepper-font-family: var(--hop-body-md-font-family);
         --ids-stepper-font-size: var(--hop-body-md-font-size);
 

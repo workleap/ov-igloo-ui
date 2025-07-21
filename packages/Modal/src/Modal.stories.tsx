@@ -124,37 +124,38 @@ export const removeClose = () => {
 };
 
 export const WithSelect = () => {
-  const [show, setShow] = useState(isChromatic());
+    const [show, setShow] = useState(isChromatic());
 
-  return (
-    <ChromaticWrapper>
-      <Button appearance="secondary" onClick={() => setShow(true)}>
-        open
-      </Button>
-      <Modal
-          title="I'm a modal"
-          isDismissable isOpen={show} onClose={() => setShow(false)}>
-        <Select options={[
-            {
-                label: 'Text option',
-                value: 'text',
-            },
-            {
-                label: 'Disabled option',
-                value: 'disabled',
-                disabled: true,
-            },
-            {
-                label: 'Text option with icon',
-                value: 'icon'
-            },
-        ]}>
-            Default
-        </Select>
-      </Modal>
-    </ChromaticWrapper>
-  );
-};
+    return (
+        <ChromaticWrapper>
+        <Button appearance="secondary" onClick={() => setShow(true)}>
+            open
+        </Button>
+        <Modal
+            title="I'm a modal"
+            isDismissable isOpen={show} onClose={() => setShow(false)}>
+            <Select options={[
+                {
+                    label: 'Text option',
+                    value: 'text',
+                },
+                {
+                    label: 'Disabled option',
+                    value: 'disabled',
+                    disabled: true,
+                },
+                {
+                    label: 'Text option with icon',
+                    value: 'icon'
+                },
+            ]}>
+                Default
+            </Select>
+        </Modal>
+        </ChromaticWrapper>
+    );
+}
+
 
 export const Example = {
   render: () => {

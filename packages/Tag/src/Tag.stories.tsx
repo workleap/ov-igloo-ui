@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta } from '@storybook/react';
 
 import Section from '@components/section';
 import readme from '../README.md';
 
-import Tag from './Tag';
 import LabelSolid from '@igloo-ui/icons/dist/LabelSolid';
+import Tag from './Tag';
 
 export default {
   title: 'Components/Tag',
@@ -16,7 +16,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap",
   },
   argTypes: {
     size: {
@@ -48,7 +49,7 @@ export default {
         'select'
       ],
     },
-  },
+  }
 } as Meta<typeof Tag>;
 
 export const Overview = {

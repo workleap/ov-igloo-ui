@@ -48,10 +48,6 @@ export interface TooltipProps
     showOnMobile?: boolean;
 }
 
-const getBrand = (): string => {
-    return document.documentElement.getAttribute("data-brand") ?? "igloo";
-};
-
 const Tooltip: React.FunctionComponent<TooltipProps> = ({
     children,
     content,
@@ -66,9 +62,7 @@ const Tooltip: React.FunctionComponent<TooltipProps> = ({
     showOnMobile = false,
     ...rest
 }: TooltipProps) => {
-    const isWorkleap = getBrand() === "workleap";
     const classes = cx("ids-tooltip__container", className);
-    const fontBase = isWorkleap ? 16 : 10;
 
     const arrowRef = React.useRef(null);
 
@@ -142,7 +136,7 @@ const Tooltip: React.FunctionComponent<TooltipProps> = ({
       "ids-tooltip--light": appearance === "light"
   });
 
-  const fromPxToRem = (value: number, base = fontBase): string =>
+  const fromPxToRem = (value: number, base = 16): string =>
       `${value / base}rem`;
 
   const center = position === "top" || position === "bottom";

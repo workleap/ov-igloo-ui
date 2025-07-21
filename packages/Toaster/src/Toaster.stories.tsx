@@ -1,12 +1,12 @@
-import React from 'react';
 import Button from '@igloo-ui/button';
+import React from 'react';
 
 import { Meta } from '@storybook/react';
 
 import ChromaticWrapper from '@components/chromaticWrapper';
 
-import Toaster, { toast } from './Toaster';
 import Toast from './Toast';
+import Toaster, { toast } from './Toaster';
 
 import readme from '../README.md';
 
@@ -18,7 +18,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap",
   },
   decorators: [
     (Story) => (
@@ -32,7 +33,7 @@ export default {
         {Story()}
       </div>
     ),
-  ],
+  ]
 } as Meta<typeof Toast>;
 
 export const Overview = {
