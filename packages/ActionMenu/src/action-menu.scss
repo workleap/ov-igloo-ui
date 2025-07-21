@@ -7,11 +7,6 @@
 @layer igloo {
     :root {
         /* Default */
-        --ids-action-menu-font-family: #{tokens.$primary-font-family};
-        --ids-action-menu-font-size: #{tokens.$font-size-4};
-    }
-
-    [data-brand="workleap"] {
         --ids-action-menu-font-family: var(--hop-body-sm-font-family);
         --ids-action-menu-font-size: var(--hop-body-sm-font-size);
     }

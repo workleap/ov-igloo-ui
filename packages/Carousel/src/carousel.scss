@@ -7,35 +7,6 @@
 @layer igloo {
     :root {
         /* Default */
-        --ids-carousel-font-family: #{tokens.$primary-font-family};
-        --ids-carousel-font-size: #{tokens.$font-size-4};
-        --ids-carousel-nav-margin: #{tokens.$space-2} -#{tokens.$space-2} -#{tokens.$space-2};
-
-        /* Bullets */
-        --ids-carousel-bullet-color: #{tokens.$grey-300};
-        --ids-carousel-bullet-focus: #{tokens.$focus};
-        --ids-carousel-bullet-size: #{tokens.$space-2};
-        --ids-carousel-bullet-margin: 0 #{tokens.$space-1};
-        --ids-carousel-bullet-list-margin: #{tokens.$space-2} #{tokens.$space-1};
-
-        /* Actions */
-        --ids-carousel-action-basis: #{tokens.$space-7};
-        --ids-carousel-action-margin: #{tokens.$space-2};
-
-        /* Hover */
-        --ids-carousel-bullet-color-hover: #{tokens.$grey-600};
-
-        /* Active */
-        --ids-carousel-bullet-color-active: #{tokens.$grey-600};
-        --ids-carousel-bullet-color-active-hover: #{tokens.$electric-blue-600};
-
-        /* Needed to add a 0.1px blur to fix a bug where
-        chrome would have a lingering blue line when focusing in and out */
-        --ids-carousel-action-focus: 0 0 0 .2rem #ffffff, 0 0 .01rem .35rem #0c46d0;
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
         --ids-carousel-font-family: var(--hop-body-md-font-family);
         --ids-carousel-font-size: var(--hop-body-md-font-size);
         --ids-carousel-nav-margin: var(--hop-space-stack-sm) calc(-1 * var(--hop-space-stack-sm)) calc(-1 * var(--hop-space-stack-sm));

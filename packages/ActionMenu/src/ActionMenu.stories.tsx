@@ -1,13 +1,13 @@
-import React from 'react';
 import isChromatic from 'chromatic/isChromatic';
+import React from 'react';
 
-import IconButton from '@igloo-ui/icon-button';
 import Button from '@igloo-ui/button';
 import HelperText from '@igloo-ui/helper-text';
-import Kebab from '@igloo-ui/icons/dist/Kebab';
+import IconButton from '@igloo-ui/icon-button';
 import AddSolid from '@igloo-ui/icons/dist/AddSolid';
-import Delete from '@igloo-ui/icons/dist/Delete';
 import Copy from '@igloo-ui/icons/dist/Copy';
+import Delete from '@igloo-ui/icons/dist/Delete';
+import Kebab from '@igloo-ui/icons/dist/Kebab';
 
 import { Meta, StoryFn } from '@storybook/react';
 
@@ -87,7 +87,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, '').replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   },
   argTypes: {
     closeOnSelect: {
@@ -145,7 +146,7 @@ export const WithinContainer = {
             }}
           />
         </div>
-        <div className="isb-action-menu__card" 
+        <div className="isb-action-menu__card"
             style={{zIndex: openedIndex === 1 ? 5 : 0}}>
           <ActionMenu
             {...args}

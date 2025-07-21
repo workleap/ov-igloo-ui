@@ -7,32 +7,6 @@
 @layer igloo {
     :root {
         /* Default */
-        --ids-dialog-font-family: #{tokens.$primary-font-family};
-        --ids-dialog-font-size: #{tokens.$font-size-4};
-        --ids-dialog-max-width: calc(100% - #{tokens.$space-5});
-        --ids-dialog-radius: #{tokens.$border-radius-sm};
-        --ids-dialog-header-height: auto;
-        --ids-dialog-header-font-size: #{tokens.$font-size-6};
-        --ids-dialog-header-font-weight: #{tokens.$font-weight-medium};
-        --ids-dialog-header-padding: #{tokens.$space-6} #{tokens.$space-3} #{tokens.$space-2};
-        --ids-dialog-header-title-alignment: center;
-        --ids-dialog-content-padding: #{tokens.$space-2} #{tokens.$space-3} #{tokens.$space-3};
-        --ids-dialog-sub-title-line-height: #{tokens.$line-height-xxxl};
-        --ids-dialog-sub-title-color: #{tokens.$grey-600};
-        --ids-dialog-sub-title-padding-top: 0;
-        --ids-dialog-close-spacing-horizontal: #{tokens.$space-2};
-        --ids-dialog-close-spacing-vertical: #{tokens.$space-2};
-        --ids-dialog-close-position: absolute;
-        --ids-dialog-close-padding-x-left: 0;
-        --ids-dialog-close-padding-x-right: 0;
-        --ids-dialog-buttons-margin: #{tokens.$space-5} -#{tokens.$space-0} -#{tokens.$space-2};
-        --ids-dialog-button-margin: #{tokens.$space-2} #{tokens.$space-0};
-        --ids-dialog-button-width: fit-content;
-        --ids-dialog-button-min-width: #{tokens.$space-10};
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
         --ids-dialog-font-family: var(--hop-body-md-font-family);
         --ids-dialog-font-size: var(--hop-body-md-font-size);
         --ids-dialog-max-width: calc(100% - 2rem);
@@ -61,22 +35,6 @@
     /* stylelint-disable-next-line media-query-no-invalid */
     @media (width >= #{tokens.$breakpoints-sm}) {
         :root {
-            --ids-dialog-header-padding: #{tokens.$space-4} #{tokens.$space-4} #{tokens.$space-2};
-            --ids-dialog-header-title-alignment: center;
-            --ids-dialog-close-spacing-horizontal: #{tokens.$space-3};
-            --ids-dialog-close-spacing-vertical: #{tokens.$space-3};
-            --ids-dialog-close-position: absolute;
-            --ids-dialog-close-padding-x-left: #{tokens.$space-5};
-            --ids-dialog-close-padding-x-right: #{tokens.$space-5};
-            --ids-dialog-content-padding: #{tokens.$space-0} #{tokens.$space-4} #{tokens.$space-4};
-            --ids-dialog-buttons-margin: var(--hop-space-stack-lg) -#{tokens.$space-2} #{tokens.$space-0};
-            --ids-dialog-button-margin: 0 #{tokens.$space-2};
-            --ids-dialog-header-font-size: #{tokens.$font-size-6};
-            --ids-dialog-header-line-height: var(--hop-heading-lg-line-height);
-            --ids-dialog-header-font-weight: #{tokens.$font-weight-medium};
-        }
-
-        [data-brand="workleap"] {
             --ids-dialog-header-padding: var(--hop-space-inset-lg) var(--hop-space-inset-lg) 0;
             --ids-dialog-header-title-alignment: left;
             --ids-dialog-close-spacing-horizontal: calc(var(--hop-space-inline-xs) + var(--hop-space-inline-md));

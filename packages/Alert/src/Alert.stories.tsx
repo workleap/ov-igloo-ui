@@ -2,15 +2,15 @@ import React from 'react';
 
 import { Meta } from '@storybook/react';
 
-import Tooltip from '@igloo-ui/tooltip';
-import Hyperlink from '@igloo-ui/hyperlink';
 import Section from '@components/section';
+import Hyperlink from '@igloo-ui/hyperlink';
+import Tooltip from '@igloo-ui/tooltip';
 import readme from '../README.md';
 
-import {
-  InfoIcon,
-} from './svgs';
 import Alert from './Alert';
+import {
+    InfoIcon,
+} from './svgs';
 
 export default {
   title: 'Components/Alert',
@@ -20,7 +20,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   },
   argTypes: {
     message: {
@@ -114,7 +115,7 @@ export const WithButton = () => (
 export const WithLink = () => (
   <Section column>
     <Alert
-      link={{ 
+      link={{
         children: <a href="#">Tell me more</a>
        }}
       type="info"
@@ -123,7 +124,7 @@ export const WithLink = () => (
       message={mockContent.message}
     />
     <Alert
-      link={{ 
+      link={{
         children: <a href="#">Tell me more</a>
        }}
       type="info"
@@ -132,7 +133,7 @@ export const WithLink = () => (
       message={mockContent.message}
     />
     <Alert
-      link={{ 
+      link={{
         children: <a href="#">Tell me more</a>
        }}
       type="info"

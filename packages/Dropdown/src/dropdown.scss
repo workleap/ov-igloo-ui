@@ -8,32 +8,6 @@
 @layer igloo {
     :root {
         /* Default */
-        --ids-dropdown-font-family: #{tokens.$primary-font-family};
-        --ids-dropdown-font-size: #{tokens.$font-size-4};
-        --ids-dropdown-color: #{tokens.$grey-800};
-        --ids-dropdown-background: #{tokens.$samoyed};
-        --ids-dropdown-border: none;
-        --ids-dropdown-border-radius: #{tokens.$border-radius-sm};
-        --ids-dropdown-zindex: #{tokens.$z-index-100};
-        --ids-dropdown-box-shadow: #{tokens.$shadow-12};
-        --ids-dropdown-padding: 0;
-        --ids-dropdown-padding-small: #{tokens.$space-3};
-        --ids-dropdown-padding-medium: #{tokens.$space-4};
-        --ids-dropdown-padding-large: #{tokens.$space-5};
-
-        /* Click Handler */
-        --ids-dropdown-zindex-click-handler: #{tokens.$z-index-90};
-
-        /* Footer */
-        --ids-dropdown-footer-background: #{tokens.$samoyed};
-        --ids-dropdown-footer-background-hover: #{tokens.$samoyed};
-        --ids-dropdown-footer-padding: #{tokens.$space-2} #{tokens.$space-3};
-        --hop-dropdown-footer-border-size: 0;
-        --hop-dropdown-footer-border-color: transparent;
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
         --ids-dropdown-font-family: var(--hop-body-sm-font-family);
         --ids-dropdown-font-size: var(--hop-body-sm-font-size);
         --ids-dropdown-color: var(--hop-neutral-text);

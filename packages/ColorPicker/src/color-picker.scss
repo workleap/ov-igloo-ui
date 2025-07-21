@@ -7,27 +7,6 @@
 @layer igloo {
     :root {
         /* Default */
-        --ids-color-picker-font-family: #{tokens.$primary-font-family};
-        --ids-color-picker-font-size: #{tokens.$font-size-4};
-        --ids-color-picker-font-weight: #{tokens.$font-weight-regular};
-        --ids-color-picker-line-height: #{tokens.$line-height-sm};
-        --ids-color-picker-padding: #{tokens.$space-1};
-
-        /* Button */
-        --ids-color-picker-btn-background: #{tokens.$samoyed};
-        --ids-color-picker-btn-background-disabled: #{tokens.$grey-300};
-        --ids-color-picker-btn-border-color: #{tokens.$grey-300};
-        --ids-color-picker-btn-border-color-hover: #{tokens.$grey-600};
-        --ids-color-picker-btn-border-color-active: #{tokens.$grey-600};
-        --ids-color-picker-btn-border-color-disabled: #{tokens.$grey-300};
-        --ids-color-picker-btn-border-radius: #{tokens.$border-radius-sm};
-        --ids-color-picker-btn-border-size: 0.15rem;
-        --ids-color-picker-btn-focus: #{tokens.$electric-blue-600};
-        --ids-color-picker-btn-padding: #{tokens.$space-2};
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
         --ids-color-picker-font-family: var(--hop-body-sm-font-family);
         --ids-color-picker-font-size: var(--hop-body-sm-font-size);
         --ids-color-picker-font-weight: var(--hop-body-sm-font-weight);

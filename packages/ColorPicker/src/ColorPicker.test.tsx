@@ -1,12 +1,12 @@
 /**
   * @jest-environment jsdom
 */
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import userEvent from '@testing-library/user-event'
 import MockDropdown from '@igloo-ui/dropdown/src/__mocks__/Dropdown.mock';
+import { fireEvent, render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import React from 'react';
 
-import ColorPicker, { ColorName, ColorPickerProps, colorNamesIgloo } from './ColorPicker';
+import ColorPicker, { ColorName, ColorPickerProps, colorNames } from './ColorPicker';
 
 jest.mock('@igloo-ui/dropdown', () => ({
   __esModule: true,
@@ -37,11 +37,11 @@ describe('ColorPicker', () => {
     const button = screen.getByRole('button');
     fireEvent.click(button);
     const options = screen.getAllByRole('option');
-    expect(options.length).toBe(colorNamesIgloo.length);
+    expect(options.length).toBe(colorNames.length);
   });
 
   test('It should call the onSelect callback and update the selected item when a color is selected', async () => {
-    let selectedColor = 'dandelion200' as ColorName;
+    let selectedColor = 'decorativeOption3' as ColorName;
     const onSelect = jest.fn((color: ColorName) => {
       selectedColor = color;
     });
@@ -51,9 +51,9 @@ describe('ColorPicker', () => {
     const option = screen.getAllByRole('option')[2];
 
     await userEvent.click(option);
-    expect(onSelect).toHaveBeenCalledWith("creamsicle150");
+    expect(onSelect).toHaveBeenCalledWith("decorativeOption1");
     rerender(<ColorPicker onSelect={onSelect} selectedColor={selectedColor} />);
-    expect(button).toHaveAttribute("data-color", "creamsicle150");
+    expect(button).toHaveAttribute("data-color", "decorativeOption1");
   });
 
   test('It should not show the color picker options when disabled', () => {

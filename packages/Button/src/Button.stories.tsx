@@ -19,6 +19,7 @@ const meta: Meta<typeof Button> = {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       },
     },
+    brand: "workleap"
   },
   argTypes: {
     children: { description: 'The content to display inside the button' },
@@ -252,7 +253,7 @@ export const States = () => (
         Premium
       </Button>
     </Section>
-    
+
     <Section>
       <Button appearance="danger">Danger</Button>
       <Button disabled appearance="danger">

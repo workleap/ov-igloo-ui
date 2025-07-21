@@ -1,28 +1,21 @@
-import * as React from "react";
 import classNames from "classnames";
+import * as React from "react";
 
-import Button, { type Appearance as ButtonAppearance } from "@igloo-ui/button";
+import { DismissIcon } from "@hopper-ui/icons-react16";
+import Button from "@igloo-ui/button";
 import type { HyperlinkProps } from "@igloo-ui/hyperlink";
 import IconButton, { type Size as IconButtonSize } from "@igloo-ui/icon-button";
-import { DismissIcon } from "@hopper-ui/icons-react16";
+import { useLocalizedStringFormatter } from "@igloo-ui/provider";
+import intlMessages from "./intl";
 import {
-    InfoIcon,
     CrownIcon,
+    InfoIcon,
     SuccessIcon,
     WarningIcon
 } from "./svgs";
-import {
-    TadaIcon as LegacyTadaIcon,
-    InfoIcon as LegacyInfoIcon,
-    CrownIcon as LegacyCrownIcon,
-    SuccessIcon as LegacySuccessIcon,
-    WarningIcon as LegacyWarningIcon
-} from "./legacy/svgs";
-import { useLocalizedStringFormatter } from "@igloo-ui/provider";
-import intlMessages from "./intl";
 
-import "./alert.scss";
 import Hyperlink from "@igloo-ui/hyperlink";
+import "./alert.scss";
 
 export type Type = "announcement" | "info" | "premium" | "success" | "warning";
 
@@ -61,16 +54,11 @@ export interface AlertProps extends Omit<React.ComponentProps<"div">, "title"> {
     link?: HyperlinkProps;
 }
 
-const getBrand = (): string => {
-    return document.documentElement.getAttribute("data-brand") ?? "igloo";
-};
-
 const renderIcon = (
     style: Appearance,
     hasButton: boolean,
     type: Type,
     icon?: React.ReactElement,
-    isWorkleap?: boolean
 ): JSX.Element => {
     const classes = classNames("ids-alert__icon", `ids-alert__icon--${style}`, {
         "ids-alert__icon--small-top": hasButton,
@@ -81,11 +69,11 @@ const renderIcon = (
         <div className={classes}>
             {icon || (
                 <>
-                    {type === "announcement" && (isWorkleap ? <InfoIcon /> : <LegacyTadaIcon />)}
-                    {type === "info" && (isWorkleap ? <InfoIcon /> : <LegacyInfoIcon />)}
-                    {type === "premium" && (isWorkleap ? <CrownIcon /> : <LegacyCrownIcon />)}
-                    {type === "success" && (isWorkleap ? <SuccessIcon /> : <LegacySuccessIcon />)}
-                    {type === "warning" && (isWorkleap ? <WarningIcon /> : <LegacyWarningIcon />)}
+                    {type === "announcement" && <InfoIcon />}
+                    {type === "info" && <InfoIcon />}
+                    {type === "premium" && <CrownIcon />}
+                    {type === "success" && <SuccessIcon />}
+                    {type === "warning" && <WarningIcon />}
                 </>
             )}
         </div>
@@ -120,21 +108,15 @@ const renderDismissButton = (
 };
 
 const renderAlertActionButton = (
-    style: Appearance,
     button?: AlertButton,
-    isWorkleap?: boolean
 ): JSX.Element => {
     if (button == null || button.onClick == null || button.label == null) {
         return <></>;
     }
 
-    const ghostAppearance = isWorkleap ?
-        { type: "ghost", variant: "secondary" } as ButtonAppearance :
-        "ghost";
-
     return (
         <Button
-            appearance={style === "horizontal" && !isWorkleap ? ghostAppearance : "secondary"}
+            appearance="secondary"
             size="small"
             onClick={button.onClick}
             loading={button.loading}
@@ -192,7 +174,6 @@ const Alert: React.FunctionComponent<AlertProps> = ({
     const hasLink = link !== undefined;
     const isHorizontal = appearance === "horizontal";
     const canBeClosed = closable;
-    const isWorkleap = getBrand() === "workleap";
 
     if (show) {
         return (
@@ -202,10 +183,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
                 data-test={dataTest}
                 {...rest}
             >
-                {icon !== null &&
-          !isHorizontal &&
-          renderIcon(appearance, hasButton || hasLink, type, icon, isWorkleap)}
-
+                {icon !== null && !isHorizontal && renderIcon(appearance, hasButton || hasLink, type, icon)}
                 <div className="ids-alert__body">
                     <div className="ids-alert__header">
                         <p className="ids-alert__title">{title}</p>
@@ -213,7 +191,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
                     </div>
                     {!isHorizontal && <div className="ids-alert__content">{message}</div>}
                     {hasLink && renderAlertActionLink(link)}
-                    {hasButton && renderAlertActionButton(appearance, button, isWorkleap)}
+                    {hasButton && renderAlertActionButton(button)}
                 </div>
 
                 {canBeClosed && renderDismissButton(setShow,

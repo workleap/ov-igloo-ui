@@ -8,17 +8,17 @@ exports[`ColorPicker It should render a snapshot 1`] = `
   >
     <button
       class="ids-color-picker__button"
-      data-color="dandelion200"
+      data-color="decorativeOption3"
       data-rac=""
-      style="--ids-picker-selected-color-hover: #FDDE88;"
+      style="--ids-picker-selected-color-hover: var(--hop-decorative-option3-surface-hover);"
       type="button"
     >
       <div
-        class="ids-color ids-color--large ids-color--circular"
+        class="ids-color ids-color--medium ids-color--circular"
       >
         <div
           class="ids-color__inner"
-          style="--ids-color-background: #FDDE88;"
+          style="--ids-color-background: var(--hop-decorative-option3-surface);"
         />
       </div>
     </button>
