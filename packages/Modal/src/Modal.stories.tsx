@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import isChromatic from 'chromatic/isChromatic';
 import Button from '@igloo-ui/button';
 import Select from '@igloo-ui/select';
+import isChromatic from 'chromatic/isChromatic';
+import React, { useState } from 'react';
 
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import ChromaticWrapper from '@components/chromaticWrapper';
-import Section from '@components/section';
 import Mockup from '@components/mockup';
+import Section from '@components/section';
 
 import readme from '../README.md';
 
@@ -122,37 +122,42 @@ export const removeClose = () => {
   );
 };
 
-export const WithSelect = () => {
-  const [show, setShow] = useState(isChromatic());
+export const WithSelect: StoryObj<typeof Modal> = {
+    parameters: {
+        brand: "workleap"
+    },
+    render: () => {
+        const [show, setShow] = useState(isChromatic());
 
-  return (
-    <ChromaticWrapper>
-      <Button appearance="secondary" onClick={() => setShow(true)}>
-        open
-      </Button>
-      <Modal 
-          title="I'm a modal"
-          isDismissable isOpen={show} onClose={() => setShow(false)}>
-        <Select options={[
-            {
-                label: 'Text option',
-                value: 'text',
-            },
-            {
-                label: 'Disabled option',
-                value: 'disabled',
-                disabled: true,
-            },
-            {
-                label: 'Text option with icon',
-                value: 'icon'
-            },
-        ]}>
-            Default
-        </Select>
-      </Modal>
-    </ChromaticWrapper>
-  );
+        return (
+            <ChromaticWrapper>
+            <Button appearance="secondary" onClick={() => setShow(true)}>
+                open
+            </Button>
+            <Modal
+                title="I'm a modal"
+                isDismissable isOpen={show} onClose={() => setShow(false)}>
+                <Select options={[
+                    {
+                        label: 'Text option',
+                        value: 'text',
+                    },
+                    {
+                        label: 'Disabled option',
+                        value: 'disabled',
+                        disabled: true,
+                    },
+                    {
+                        label: 'Text option with icon',
+                        value: 'icon'
+                    },
+                ]}>
+                    Default
+                </Select>
+            </Modal>
+            </ChromaticWrapper>
+        );
+    }
 };
 
 export const Example = {
