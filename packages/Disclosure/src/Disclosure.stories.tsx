@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
-import Substract from '@igloo-ui/icons/dist/Substract';
+import Button from '@igloo-ui/button';
 import ArrowUp from '@igloo-ui/icons/dist/ArrowUp';
 import Settings from '@igloo-ui/icons/dist/Settings';
-import Button from '@igloo-ui/button';
+import Substract from '@igloo-ui/icons/dist/Substract';
 import Tag from '@igloo-ui/tag';
 
 import readme from '../README.md';
@@ -20,11 +20,12 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   },
 } as Meta<typeof Disclosure>;
 
-export const Overview = {
+export const Overview: StoryObj<typeof Disclosure> = {
   args: {
     children: (
       <div style={{ background: '#F7F9FA', padding: '2.4rem' }}>
@@ -46,7 +47,7 @@ export const Overview = {
         In the last 30 days
       </div>
     ),
-  },
+  }
 };
 
 export const Expanded = {

@@ -7,34 +7,6 @@
 @layer igloo {
     :root {
         /* Default */
-        --ids-step-font-family: #{tokens.$primary-font-family};
-        --ids-step-font-size: #{tokens.$font-size-4};
-        --ids-step-background: #{tokens.$samoyed};
-        --ids-step-border: #{tokens.$grey-300};
-        --ids-step-size: 2rem;
-        --ids-step-complete-color: #{tokens.$samoyed};
-        --ids-step-complete-background: #{tokens.$electric-blue-500};
-        --ids-step-focus: #{tokens.$focus};
-
-        /* Hover */
-        --ids-step-border-hover: #{tokens.$grey-800};
-        --ids-step-background-hover: #{tokens.$samoyed};
-        --ids-step-complete-background-hover: #{tokens.$electric-blue-600};
-
-        /* Pressed */
-        --ids-step-border-pressed: #{tokens.$grey-800};
-        --ids-step-background-pressed: #{tokens.$samoyed};
-        --ids-step-complete-background-pressed: #{tokens.$electric-blue-600};
-
-        /* Current Step */
-        --ids-step-current-background: #{tokens.$samoyed};
-        --ids-step-current-border: #{tokens.$grey-300};
-        --ids-step-current-dot-background: #{tokens.$electric-blue-500};
-        --ids-step-current-dot-size: 1rem;
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
         --ids-step-font-family: var(--hop-body-md-font-family);
         --ids-step-font-size: var(--hop-body-md-font-size);
         --ids-step-background: var(--hop-neutral-surface);

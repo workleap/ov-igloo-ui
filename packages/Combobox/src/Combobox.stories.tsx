@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
-import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
+import { Meta, StoryObj } from '@storybook/react';
+import { userEvent, within } from '@storybook/testing-library';
 
-import Tag from '@igloo-ui/tag';
+import Button from '@igloo-ui/button';
 import Happiness from '@igloo-ui/icons/dist/Happiness';
 import { OptionType } from '@igloo-ui/list';
-import Button from '@igloo-ui/button';
+import Tag from '@igloo-ui/tag';
 
 import Section from '@components/section';
 import readme from '../../Combobox/README.md';
@@ -23,6 +23,7 @@ export default {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       },
     },
+    brand: "workleap"
   },
   decorators: [
     (Story) => (

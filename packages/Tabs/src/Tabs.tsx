@@ -2,8 +2,6 @@ import * as React from "react";
 
 import cx from "classnames";
 
-import CrownSolid from "@igloo-ui/icons/dist/CrownSolid";
-import TextBulletSolid from "@igloo-ui/icons/dist/TextBulletSolid";
 import { BulletIcon, UpsellIcon } from "@hopper-ui/icons-react16";
 
 import "./tabs.scss";
@@ -36,10 +34,6 @@ export interface TabsProps extends React.ComponentProps<"div"> {
     tabs: Array<TabInterface>;
 }
 
-const getBrand = (): string => {
-    return document.documentElement.getAttribute("data-brand") ?? "igloo";
-};
-
 const Tabs: React.FunctionComponent<TabsProps> = ({
     onSelectTab,
     selected = 0,
@@ -53,8 +47,6 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
         "ids-tabs--inline": isInline,
         "ids-tabs--heading": !isInline
     });
-    
-    const isWorkleap = getBrand() === "workleap";
 
     const handleOnClick = (index: number): void => {
         if (onSelectTab) {
@@ -70,30 +62,16 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
         let tabContents = (
             <>
                 {tab.notification && (
-                    isWorkleap ? (
-                        <BulletIcon
-                            size="sm"
-                            className={notificationClass}
-                        />
-                    ) : (
-                        <TextBulletSolid
-                            size="small"
-                            className={notificationClass}
-                        />
-                    )
+                    <BulletIcon
+                        size="sm"
+                        className={notificationClass}
+                    />
                 )}
                 {tab.premium && (
-                    isWorkleap ? (
-                        <UpsellIcon
-                            size="sm"
-                            className={premiumClass}
-                        />
-                    ) : (
-                        <CrownSolid
-                            size="small"
-                            className={premiumClass}
-                        />
-                    )
+                    <UpsellIcon
+                        size="sm"
+                        className={premiumClass}
+                    />
                 )}
             </>
         );
