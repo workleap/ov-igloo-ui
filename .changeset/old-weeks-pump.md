@@ -14,7 +14,6 @@
 "@igloo-ui/option-button": minor
 "@igloo-ui/pie-chart": minor
 "@igloo-ui/popover": minor
-"@igloo-ui/provider": minor
 ---
 
 Clean up non-Workleap rebranded styles for components E-P.
