@@ -1,6 +1,5 @@
 import React from 'react';
 
-import tokens from '@igloo-ui/tokens/dist/base10/tokens.json';
 import { Meta, StoryObj } from '@storybook/react';
 
 import readme from '../README.md';
@@ -28,33 +27,6 @@ const mockData = [
     id: '1',
     label: 'Good vibes',
     value: 48,
-    color: tokens.dandelion400,
-  },
-  {
-    id: '2',
-    label: 'Excellence',
-    value: 46,
-    color: tokens.electricBlue500,
-  },
-  {
-    id: '3',
-    label: 'Radical candor',
-    value: 24,
-    color: tokens.strawberryFields200,
-  },
-  {
-    id: '4',
-    label: 'Custom cards by members',
-    value: 0,
-    color: tokens.sky100,
-  },
-];
-
-const mockDataWL = [
-  {
-    id: '1',
-    label: 'Good vibes',
-    value: 48,
     color: "#C7EBFF",
   },
   {
@@ -77,18 +49,11 @@ const mockDataWL = [
   },
 ];
 
-const getMockData = (brand: string) => {
-  const data = brand === 'workleap' ? mockDataWL : mockData;
-  return data;
-}
-
 export const Overview: Story = {
-  render: (args, { globals: { brand } }) => {
-    return (
+  render: (args) => (
       <BarChart
         {...args}
-        dataSet={getMockData(brand)}
+        dataSet={mockData}
       />
-    );
-  },
+    ),
 };
