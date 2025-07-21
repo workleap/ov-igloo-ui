@@ -3,23 +3,6 @@
 
 :root {
   /* Default */
-  --ids-color-picker-option-border-radius: #{tokens.$border-radius-md};
-  --ids-color-picker-option-border-size: 0.15rem;
-  --ids-color-picker-option-padding: #{tokens.$space-1};
-
-  /* Focused */
-  --ids-color-picker-option-border-color-focus: #{tokens.$electric-blue-600};
-
-  /* Hovered */
-  --ids-color-picker-option-border-color-hover: #{tokens.$grey-600};
-
-  /* Selected */
-  --ids-color-picker-option-border-color-selected: #{tokens.$grey-400};
-
-}
-
-[data-brand="workleap"] {
-  /* Default */
   --ids-color-picker-option-border-radius: var(--hop-shape-circle);
   --ids-color-picker-option-border-size: 0.09rem;
   --ids-color-picker-option-padding: var(--hop-space-inset-xs);

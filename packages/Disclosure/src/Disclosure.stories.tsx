@@ -20,7 +20,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   },
 } as Meta<typeof Disclosure>;
 
@@ -46,9 +47,6 @@ export const Overview: StoryObj<typeof Disclosure> = {
         In the last 30 days
       </div>
     ),
-  },
-  parameters: {
-    brand: "workleap"
   }
 };
 

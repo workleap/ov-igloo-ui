@@ -2,35 +2,6 @@
 
 :root {
     /* Default */
-    --ids-combobox-input-chevron-color: #{tokens.$grey-800};
-    --ids-combobox-input-search-height: 3.9rem;
-    --ids-combobox-input-actions-padding: 0 #{tokens.$space-2};
-    --ids-combobox-input-value-padding: #{tokens.$space-2} #{tokens.$space-3};
-    --ids-combobox-input-value-color: #{tokens.$grey-800};
-    --ids-combobox-input-clear-margin-right: #{tokens.$space-1};
-
-    /* Disabled */
-    --ids-combobox-input-chevron-color-disabled: #{tokens.$grey-600};
-    --ids-combobox-input-value-color-disabled: #{tokens.$grey-500};
-
-    /* Compact **/
-    --ids-combobox-input-value-padding-compact: #{tokens.$space-1} #{tokens.$space-3};
-    --ids-combobox-input-search-height-compact: 3rem;
-
-    /* Placeholder */
-    --ids-combobox-input-value-color-placeholder: #{tokens.$grey-400};
-
-    /* Visual Identifier */
-    --ids-combobox-input-icon-size: #{tokens.$space-3};
-    --ids-combobox-input-icon-margin-right: #{tokens.$space-2};
-
-    /* Search icon */
-    --ids-combobox-input-search-icon-color: #{tokens.$grey-400};
-    --ids-combobox-input-search-icon-margin: 0 #{tokens.$space-2} 0 #{tokens.$space-3};
-}
-
-[data-brand="workleap"] {
-    /* Default */
     --ids-combobox-input-chevron-color: var(--hop-neutral-icon-weak);
     --ids-combobox-input-search-height: 2.4375rem;
     --ids-combobox-input-actions-padding: 0 var(--hop-space-inline-md) 0 var(--hop-space-inline-sm);
@@ -57,7 +28,6 @@
     --ids-combobox-input-search-icon-color: var(--hop-neutral-icon-weak);
     --ids-combobox-input-search-icon-margin: 0 var(--hop-space-inline-sm) 0 var(--hop-space-inline-md);
 }
-
 
 .ids-combobox-input {
     align-content: center;

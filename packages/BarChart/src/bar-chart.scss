@@ -7,26 +7,6 @@
 @layer igloo {
     :root {
         /* Default */
-        --ids-bar-chart-font-family: #{tokens.$primary-font-family};
-        --ids-bar-chart-font-size: #{tokens.$font-size-3};
-        --ids-bar-chart-font-weight: #{tokens.$font-weight-regular};
-        --ids-bar-chart-gap: #{tokens.$space-3};
-        --ids-bar-chart-line-height: #{tokens.$line-height-xxl};
-        --ids-bar-chart-value-font-family: #{tokens.$secondary-font-family};
-        --ids-bar-chart-value-font-size: #{tokens.$font-size-5};
-        --ids-bar-chart-value-line-height: #{tokens.$line-height-xl};
-        --ids-bar-chart-value-color: #{tokens.$grey-800};
-        --ids-bar-chart-value-weight: #{tokens.$font-weight-medium};
-        --ids-bar-chart-content-gap: #{tokens.$space-2};
-        --ids-bar-chart-graph-height: calc(#{tokens.$space-4} / 2);
-        --ids-bar-chart-graph-background: #{tokens.$grey-300};
-        --ids-bar-chart-graph-radius: #{tokens.$border-radius-sm};
-        --ids-bar-chart-graph-width: #{tokens.$space-1};
-        --ids-bar-chart-label-color: #{tokens.$grey-800};
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
         --ids-bar-chart-font-family: var(--hop-body-sm-font-family);
         --ids-bar-chart-font-size: var(--hop-body-sm-font-size);
         --ids-bar-chart-font-weight: var(--hop-body-sm-font-weight);

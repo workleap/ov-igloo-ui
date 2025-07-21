@@ -1,10 +1,10 @@
-import React from 'react';
 import isChromatic from 'chromatic/isChromatic';
+import React from 'react';
 
 import { Meta, StoryFn } from '@storybook/react';
 
-import Button from '@igloo-ui/button';
 import ChromaticWrapper from '@components/chromaticWrapper';
+import Button from '@igloo-ui/button';
 
 import readme from '../README.md';
 
@@ -20,6 +20,7 @@ export default {
       }
     },
     chromatic: { pauseAnimationAtEnd: true },
+    brand: "workleap"
   },
 } as Meta<typeof Dialog>;
 

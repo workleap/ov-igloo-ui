@@ -1,7 +1,7 @@
-import React from 'react';
 import Button from '@igloo-ui/button';
 import Modal from '@igloo-ui/modal';
 import { Meta, StoryFn } from '@storybook/react';
+import React from 'react';
 
 import readme from '../README.md';
 
@@ -15,7 +15,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   },
   argTypes: {
     children: {

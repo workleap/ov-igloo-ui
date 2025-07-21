@@ -15,21 +15,16 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   }
 } as Meta<typeof ColorPicker>;
 
 type Story = StoryObj<typeof ColorPicker>;
 
 export const Overview: Story = {
-  render: (args, {globals: {brand}}) => {
-    const defaultColor = brand === "workleap" ? "decorativeOption3" : "dandelion200";
-    const [selectedColor, setSelectedColor] = React.useState<ColorName>(defaultColor);
-
-    React.useEffect(() => {
-        // update the selected color if the theme changes
-        setSelectedColor(defaultColor);
-    }, [defaultColor])
+  render: (args) => {
+    const [selectedColor, setSelectedColor] = React.useState<ColorName>("decorativeOption3");
 
     return (
       <Section>

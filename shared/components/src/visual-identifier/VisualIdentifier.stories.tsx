@@ -13,6 +13,9 @@ export default {
       control: { type: null },
     },
   },
+  parameters: {
+    brand: "workleap",
+  }
 } as Meta<typeof VisualIdentifier>;
 
 export const Overview = {
