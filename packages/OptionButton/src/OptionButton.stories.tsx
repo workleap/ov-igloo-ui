@@ -5,8 +5,8 @@ import { Meta, StoryFn } from '@storybook/react';
 import Section from '@components/section';
 import readme from '../README.md';
 
-import OptionButton from './OptionButton';
 import Sparkles from '@igloo-ui/icons/dist/Sparkles';
+import OptionButton from './OptionButton';
 
 export default {
   title: 'Components/OptionButton',
@@ -16,7 +16,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   },
 } as Meta<typeof OptionButton>;
 

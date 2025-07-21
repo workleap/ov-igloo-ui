@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import isChromatic from 'chromatic/isChromatic';
 import Button from '@igloo-ui/button';
 import Select from '@igloo-ui/select';
+import isChromatic from 'chromatic/isChromatic';
+import React, { useState } from 'react';
 
 import { Meta, StoryFn } from '@storybook/react';
 
 import ChromaticWrapper from '@components/chromaticWrapper';
-import Section from '@components/section';
 import Mockup from '@components/mockup';
+import Section from '@components/section';
 
 import readme from '../README.md';
 
@@ -21,7 +21,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   },
 } as Meta<typeof Modal>;
 
@@ -130,7 +131,7 @@ export const WithSelect = () => {
       <Button appearance="secondary" onClick={() => setShow(true)}>
         open
       </Button>
-      <Modal 
+      <Modal
           title="I'm a modal"
           isDismissable isOpen={show} onClose={() => setShow(false)}>
         <Select options={[

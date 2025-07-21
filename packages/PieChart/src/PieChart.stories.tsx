@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
 import tokens from '@igloo-ui/tokens/dist/base10/tokens.json';
+import { Meta, StoryObj } from '@storybook/react';
 
 import Section from '@components/section';
 import readme from '../README.md';
@@ -16,7 +16,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   }
 } as Meta<typeof PieChart>;
 

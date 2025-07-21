@@ -2,14 +2,14 @@ import React from 'react';
 
 import { Meta, StoryFn } from '@storybook/react';
 
-import Reminder from '@igloo-ui/icons/dist/Reminder';
 import Button from '@igloo-ui/button';
+import Reminder from '@igloo-ui/icons/dist/Reminder';
 import Tag from '@igloo-ui/tag';
 
 import readme from '../README.md';
 
+import type { Member, Option, OptionType } from './List';
 import List from './List';
-import type { Option, Member, OptionType } from './List';
 
 export default {
   title: 'Components/List',
@@ -19,7 +19,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   },
 } as Meta<typeof List>;
 

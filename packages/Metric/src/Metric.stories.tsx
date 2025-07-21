@@ -3,10 +3,10 @@ import React from 'react';
   import { Meta, StoryObj } from '@storybook/react';
 
   import Wellness from '@igloo-ui/icons/dist/Wellness';
-  import WellnessSolid from '@igloo-ui/icons/dist/WellnessSolid';
+import WellnessSolid from '@igloo-ui/icons/dist/WellnessSolid';
 
   import Section from '@components/section';
-  import readme from '../README.md';
+import readme from '../README.md';
 
   import Metric from './Metric';
 
@@ -16,15 +16,16 @@ import React from 'react';
     parameters: {
       docs: {
         description: {
-          component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
-        }
-      }
+            component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
+            }
+        },
+        brand: "workleap"
     },
-    argTypes: {        
+    argTypes: {
       icon: { control: { type: null } },
     }
   } as Meta<typeof Metric>;
-  
+
   type Story = StoryObj<typeof Metric>;
 
   export const Overview: Story = {

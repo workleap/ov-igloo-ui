@@ -1,13 +1,13 @@
 import React from 'react';
 
+import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
 
 import readme from '../README.md';
 
-import Hyperlink from './Hyperlink';
 import Plus from '@igloo-ui/icons/dist/Plus';
+import Hyperlink from './Hyperlink';
 
 import Section from '@components/section';
 
@@ -26,6 +26,7 @@ export default {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
     },
+    brand: "workleap"
   },
   argTypes: {
     onClick: {

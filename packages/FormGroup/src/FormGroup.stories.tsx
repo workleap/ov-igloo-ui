@@ -1,11 +1,11 @@
-import React from 'react';
 import Input from '@igloo-ui/input';
-import Textarea from '@igloo-ui/textarea';
-import Select from '@igloo-ui/select';
 import type { OptionType } from '@igloo-ui/list';
+import Select from '@igloo-ui/select';
+import Textarea from '@igloo-ui/textarea';
+import React from 'react';
 
-import { Meta, StoryFn } from '@storybook/react';
 import Section from '@components/section';
+import { Meta, StoryFn } from '@storybook/react';
 
 import readme from '../README.md';
 import FormGroup from './FormGroup';
@@ -18,7 +18,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   },
 } as Meta<typeof FormGroup>;
 
