@@ -1,12 +1,11 @@
-import * as React from "react";
-import cx from "classnames";
-import type { QueuedToast, ToastState } from "@react-stately/toast";
 import { useToast } from "@react-aria/toast";
+import type { QueuedToast, ToastState } from "@react-stately/toast";
+import cx from "classnames";
+import * as React from "react";
 
-import IconButton from "@igloo-ui/icon-button";
 import Close from "@igloo-ui/icons/dist/Close";
-import SuccessSolid from "@igloo-ui/icons/dist/SuccessSolid";
 import RemoveSolid from "@igloo-ui/icons/dist/RemoveSolid";
+import SuccessSolid from "@igloo-ui/icons/dist/SuccessSolid";
 import type { ToastArgs } from "./Toaster";
 
 export interface ToastProps<T> {
@@ -29,10 +28,6 @@ const Toast: React.FunctionComponent<ToastProps<ToastArgs>> = ({
         state,
         toastRef
     );
-
-    const getBrand = (): string => {
-        return document.documentElement.getAttribute("data-brand") ?? "igloo";
-    };
 
     delete closeButtonProps.onPress;
 
@@ -69,21 +64,7 @@ const Toast: React.FunctionComponent<ToastProps<ToastArgs>> = ({
             <div {...titleProps} className="ids-toast__title">
                 {statusIcon} {message}
             </div>
-            {isClosable && getBrand() === "igloo" && (
-                <IconButton
-                    {...closeButtonProps}
-                    className="ids-toast__close"
-                    onClick={() => {
-                        state.close(toast.key);
-                    }}
-                    appearance={{
-                        type: "ghost",
-                        variant: "secondary"
-                    }}
-                    icon={<Close size="medium" />}
-                />
-            )}
-            {isClosable && getBrand() === "workleap" && (
+            {isClosable && (
                 <button
                     {...closeButtonProps}
                     onClick={() => {

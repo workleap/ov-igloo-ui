@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta } from '@storybook/react';
 
 import Section from '@components/section';
 import readme from '../README.md';
@@ -15,8 +15,9 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
-  },
+    },
+    brand: "workleap",
+  }
 } as Meta<typeof Toggle>;
 
 export const Overview = {

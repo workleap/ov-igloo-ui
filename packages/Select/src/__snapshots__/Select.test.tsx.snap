@@ -23,17 +23,16 @@ exports[`Select It should render a snapshot 1`] = `
           class="ids-select__input-actions"
         >
           <svg
-            class="ids-icon ids-select__input__chevron"
-            fill="none"
+            aria-hidden="true"
+            class="Icon-module__hop-Icon___QR-jY ids-select__input__chevron"
+            focusable="false"
             height="16"
+            role="img"
             viewBox="0 0 16 16"
             width="16"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              clip-rule="evenodd"
-              d="M4.604 10.75c-.891 0-1.337-1.077-.708-1.707l3.397-3.397a1 1 0 0 1 1.414 0l-.497.497.497-.497 3.397 3.397c.63.63.183 1.707-.707 1.707H4.603Z"
-              fill="currentColor"
+              d="M1.97 10.43a.75.75 0 0 0 1.06 0L8 5.46l4.97 4.97a.75.75 0 1 0 1.06-1.061L8.707 4.046a1 1 0 0 0-1.414 0L1.97 9.37a.75.75 0 0 0 0 1.06"
               fill-rule="evenodd"
             />
           </svg>

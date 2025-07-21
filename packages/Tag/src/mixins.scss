@@ -1,11 +1,6 @@
 @use '~@igloo-ui/tokens/dist/base10/variables' as tokens;
 
 :root {
-    --ids-tag-border-size: 0.1rem;
-    --ids-tag-hover-cursor: initial;
-}
-
-[data-brand="workleap"] {
     --ids-tag-border-size: 0.0625rem;
     --ids-tag-background-disabled: var(--hop-neutral-surface-disabled);
     --ids-tag-color-disabled: var(--hop-neutral-text-disabled);

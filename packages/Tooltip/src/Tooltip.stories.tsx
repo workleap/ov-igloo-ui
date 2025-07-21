@@ -1,14 +1,14 @@
-import React from 'react';
 import isChromatic from 'chromatic/isChromatic';
+import React from 'react';
 
 import { Meta } from '@storybook/react';
 
-import Tooltip, { TooltipProps } from './Tooltip';
 import Button from '@igloo-ui/button';
 import IconButton from '@igloo-ui/icon-button';
-import Modal from '@igloo-ui/modal';
 import Delete from '@igloo-ui/icons/dist/Delete';
 import HelpSolid from '@igloo-ui/icons/dist/HelpSolid';
+import Modal from '@igloo-ui/modal';
+import Tooltip, { TooltipProps } from './Tooltip';
 
 
 import ChromaticWrapper from '@components/chromaticWrapper';
@@ -27,6 +27,7 @@ export default {
       }
     },
     chromatic: { disableSnapshot: true },
+    brand: "workleap"
   },
   args: {
     children: 'Playground tooltip',
@@ -46,13 +47,11 @@ export default {
     },
   },
   decorators: [
-    (Story, context) => {
-      const isWorleap = context.globals.brand === 'workleap';
-
+    (Story) => {
       return (
       <div
         style={{
-          fontSize: isWorleap ? '1rem' : '1.6rem',
+          fontSize: '1rem',
           paddingTop: 40,
           paddingBottom: 40,
           paddingRight: 50,
@@ -62,7 +61,7 @@ export default {
         {Story()}
       </div>
     )},
-  ],
+  ]
 } as Meta<typeof Tooltip>;
 
 export const Overview = {
