@@ -3,7 +3,7 @@ import Select from '@igloo-ui/select';
 import isChromatic from 'chromatic/isChromatic';
 import React, { useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import ChromaticWrapper from '@components/chromaticWrapper';
 import Mockup from '@components/mockup';
@@ -21,7 +21,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   },
 } as Meta<typeof Modal>;
 
@@ -122,43 +123,37 @@ export const removeClose = () => {
   );
 };
 
-export const WithSelect: StoryObj<typeof Modal> = {
-    parameters: {
-        brand: "workleap",
-        chromatic: { delay: 500 }
-    },
-    render: () => {
-        const [show, setShow] = useState(isChromatic());
+export const WithSelect = () => {
+    const [show, setShow] = useState(isChromatic());
 
-        return (
-            <ChromaticWrapper>
-            <Button appearance="secondary" onClick={() => setShow(true)}>
-                open
-            </Button>
-            <Modal
-                title="I'm a modal"
-                isDismissable isOpen={show} onClose={() => setShow(false)}>
-                <Select options={[
-                    {
-                        label: 'Text option',
-                        value: 'text',
-                    },
-                    {
-                        label: 'Disabled option',
-                        value: 'disabled',
-                        disabled: true,
-                    },
-                    {
-                        label: 'Text option with icon',
-                        value: 'icon'
-                    },
-                ]}>
-                    Default
-                </Select>
-            </Modal>
-            </ChromaticWrapper>
-        );
-    }
+    return (
+        <ChromaticWrapper>
+        <Button appearance="secondary" onClick={() => setShow(true)}>
+            open
+        </Button>
+        <Modal
+            title="I'm a modal"
+            isDismissable isOpen={show} onClose={() => setShow(false)}>
+            <Select options={[
+                {
+                    label: 'Text option',
+                    value: 'text',
+                },
+                {
+                    label: 'Disabled option',
+                    value: 'disabled',
+                    disabled: true,
+                },
+                {
+                    label: 'Text option with icon',
+                    value: 'icon'
+                },
+            ]}>
+                Default
+            </Select>
+        </Modal>
+        </ChromaticWrapper>
+    );
 };
 
 export const Example = {

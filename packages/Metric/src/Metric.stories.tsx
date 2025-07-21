@@ -3,10 +3,9 @@ import React from 'react';
   import { Meta, StoryObj } from '@storybook/react';
 
   import Wellness from '@igloo-ui/icons/dist/Wellness';
-  import WellnessSolid from '@igloo-ui/icons/dist/WellnessSolid';
 
   import Section from '@components/section';
-  import readme from '../README.md';
+import readme from '../README.md';
 
   import Metric from './Metric';
 
@@ -16,15 +15,16 @@ import React from 'react';
     parameters: {
       docs: {
         description: {
-          component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
-        }
-      }
+            component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
+            }
+        },
+        brand: "workleap"
     },
-    argTypes: {        
+    argTypes: {
       icon: { control: { type: null } },
     }
   } as Meta<typeof Metric>;
-  
+
   type Story = StoryObj<typeof Metric>;
 
   export const Overview: Story = {
@@ -89,8 +89,7 @@ import React from 'react';
   };
 
   export const Score: Story = {
-    render: (_args, {globals: {brand}}) => {
-      return (
+    render: () => (
         <Section>
           <Metric
             value={20}
@@ -113,12 +112,11 @@ import React from 'react';
             variation={3}
             label="Selected"
             appearance="selected"
-            icon={brand === "workleap" ? <Wellness size="medium" /> : <WellnessSolid size="medium" />}
+            icon={<Wellness size="medium" />}
             type="score"
           />
         </Section>
-      );
-    },
+      )
   };
 
   export const SubMetric: Story = {

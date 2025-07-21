@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Meta } from '@storybook/react';
-import Search from '@igloo-ui/icons/dist/Search';
 import Percentage from '@igloo-ui/icons/dist/Percentage';
+import Search from '@igloo-ui/icons/dist/Search';
+import { Meta } from '@storybook/react';
 
 import Input from './Input';
 
@@ -17,7 +17,8 @@ export default {
             description: {
                 component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
             }
-        }
+        },
+        brand: "workleap"
     },
     argTypes: {
         value: {

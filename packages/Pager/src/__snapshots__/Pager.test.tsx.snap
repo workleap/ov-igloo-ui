@@ -24,17 +24,16 @@ exports[`Pager It should render without error and a snapshot 1`] = `
             <svg
               class="ids-icon"
               fill="none"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9.333 4 5.57 7.764a.333.333 0 0 0 0 .472L9.333 12"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
+                clip-rule="evenodd"
+                d="M14.53 5.47a.75.75 0 0 1 0 1.06L9.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06l-5.647-5.646a1.25 1.25 0 0 1 0-1.768L13.47 5.47a.75.75 0 0 1 1.06 0Z"
+                fill="currentColor"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -144,17 +143,16 @@ exports[`Pager It should render without error and a snapshot 1`] = `
             <svg
               class="ids-icon"
               fill="none"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="m6 4 3.823 3.823a.25.25 0 0 1 0 .354L6 12"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
+                clip-rule="evenodd"
+                d="M9.47 5.47a.75.75 0 0 0 0 1.06L14.94 12l-5.47 5.47a.75.75 0 1 0 1.06 1.06l5.647-5.646a1.25 1.25 0 0 0 0-1.768L10.53 5.47a.75.75 0 0 0-1.06 0Z"
+                fill="currentColor"
+                fill-rule="evenodd"
               />
             </svg>
           </button>

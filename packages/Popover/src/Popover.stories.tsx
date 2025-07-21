@@ -1,8 +1,8 @@
-import React from 'react';
 import { DateTime } from 'luxon';
+import React from 'react';
 
-import { Meta, StoryFn } from '@storybook/react';
 import Hyperlink from '@igloo-ui/hyperlink';
+import { Meta, StoryFn } from '@storybook/react';
 
 import ChromaticWrapper from '@components/chromaticWrapper';
 import Section from '@components/section';
@@ -20,6 +20,7 @@ export default {
       }
     },
     chromatic: { diffThreshold: 0.792 },
+    brand: "workleap"
   },
   argTypes: {
     children: {

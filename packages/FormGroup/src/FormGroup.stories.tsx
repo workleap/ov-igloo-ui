@@ -5,7 +5,7 @@ import Textarea from '@igloo-ui/textarea';
 import React from 'react';
 
 import Section from '@components/section';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import readme from '../README.md';
 import FormGroup from './FormGroup';
@@ -18,7 +18,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap"
   },
 } as Meta<typeof FormGroup>;
 
@@ -93,69 +94,63 @@ export const info = () => {
   );
 };
 
-export const OtherFormElements: StoryObj<typeof FormGroup> = {
-    parameters: {
-        brand: "workleap",
-        chromatic: { delay: 500 }
-    },
-    render: () => {
-        const smallOptionList = [
-            {
-            label: 'Text option',
-            value: 'text',
-            },
-            {
-            label: 'Disabled option',
-            value: 'disabled',
-            disabled: true,
-            },
-            {
-            label: 'Text option 3',
-            value: 'icon',
-            },
-        ];
+export const OtherFormElements = () => {
+    const smallOptionList = [
+        {
+        label: 'Text option',
+        value: 'text',
+        },
+        {
+        label: 'Disabled option',
+        value: 'disabled',
+        disabled: true,
+        },
+        {
+        label: 'Text option 3',
+        value: 'icon',
+        },
+    ];
 
-        const [hasSelectError, setHasSelectError] = React.useState(true);
-        const [hasTextareaError, setHasTextareaError] = React.useState(true);
+    const [hasSelectError, setHasSelectError] = React.useState(true);
+    const [hasTextareaError, setHasTextareaError] = React.useState(true);
 
-        const handleSelectOnChange = (option: OptionType | undefined): void => {
-            setHasSelectError(!option?.value);
-        };
+    const handleSelectOnChange = (option: OptionType | undefined): void => {
+        setHasSelectError(!option?.value);
+    };
 
-        const handleTextareaOnChange = (
-            event: React.ChangeEvent<HTMLTextAreaElement>
-        ): void => {
-            setHasTextareaError(!event?.target?.value);
-        };
+    const handleTextareaOnChange = (
+        event: React.ChangeEvent<HTMLTextAreaElement>
+    ): void => {
+        setHasTextareaError(!event?.target?.value);
+    };
 
-        return (
-            <Section column>
-            <FormGroup
-                label="Error Select"
-                message="You must select an option"
-                showMessage={hasSelectError}
+    return (
+        <Section column>
+        <FormGroup
+            label="Error Select"
+            message="You must select an option"
+            showMessage={hasSelectError}
+        >
+            <Select
+            options={smallOptionList}
+            error={hasSelectError}
+            onChange={handleSelectOnChange}
             >
-                <Select
-                options={smallOptionList}
-                error={hasSelectError}
-                onChange={handleSelectOnChange}
-                >
-                Error
-                </Select>
-            </FormGroup>
+            Error
+            </Select>
+        </FormGroup>
 
-            <FormGroup
-                label="Error Textarea"
-                message="You must enter text"
-                showMessage={hasTextareaError}
-            >
-                <Textarea
-                placeholder="Enter text here"
-                error={hasTextareaError}
-                onChange={handleTextareaOnChange}
-                />
-            </FormGroup>
-            </Section>
-        );
-    }
-}
+        <FormGroup
+            label="Error Textarea"
+            message="You must enter text"
+            showMessage={hasTextareaError}
+        >
+            <Textarea
+            placeholder="Enter text here"
+            error={hasTextareaError}
+            onChange={handleTextareaOnChange}
+            />
+        </FormGroup>
+        </Section>
+    );
+};

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta } from '@storybook/react';
 
 import IconButton from './IconButton';
 
@@ -27,6 +27,7 @@ export default {
         'underline',
       ],
     },
+    brand: "workleap"
   },
   argTypes: {
     size: {

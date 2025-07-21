@@ -1,15 +1,11 @@
-import * as React from "react";
 import cx from "classnames";
+import * as React from "react";
 
 import {
-    LegacyTextIcon,
-    LegacyOptionScaleIcon,
-    LegacyMultipleChoiceIcon,
-    LegacyLikertIcon,
-    TextIcon,
-    OptionScaleIcon,
+    LikertIcon,
     MultipleChoiceIcon,
-    LikertIcon
+    OptionScaleIcon,
+    TextIcon
 } from "./svgs";
 
 import "./option-button.scss";
@@ -44,10 +40,6 @@ export interface OptionButtonProps extends React.ComponentProps<"input"> {
     unchecked?: boolean;
 }
 
-const getBrand = (): string => {
-    return document.documentElement.getAttribute("data-brand") ?? "igloo";
-};
-
 const OptionButton: React.FunctionComponent<OptionButtonProps> = ({
     buttonType = "text",
     checked,
@@ -67,44 +59,32 @@ const OptionButton: React.FunctionComponent<OptionButtonProps> = ({
             return icon;
         }
 
-        const isWorkleap = getBrand() === "workleap";
-        let OptionScale = LegacyOptionScaleIcon;
-        let MultipleChoice = LegacyMultipleChoiceIcon;
-        let Likert = LegacyLikertIcon;
-        let Text = LegacyTextIcon;
-        if (isWorkleap) {
-            OptionScale = OptionScaleIcon;
-            MultipleChoice = MultipleChoiceIcon;
-            Likert = LikertIcon;
-            Text = TextIcon;
-        }
-
         switch (buttonType) {
             case "optionScale":
                 return (
-                    <OptionScale
-                        className={`ids-option-button__icon 
+                    <OptionScaleIcon
+                        className={`ids-option-button__icon
                         ids-option-button__option-scale-icon`}
                     />
                 );
             case "multipleChoice":
                 return (
-                    <MultipleChoice
-                        className={`ids-option-button__icon 
+                    <MultipleChoiceIcon
+                        className={`ids-option-button__icon
                         ids-option-button__multiple-choice-icon`}
                     />
                 );
             case "likert":
                 return (
-                    <Likert
-                        className={`ids-option-button__icon 
+                    <LikertIcon
+                        className={`ids-option-button__icon
                         ids-option-button__likert-icon`}
                     />
                 );
             default:
                 return (
-                    <Text
-                        className={`ids-option-button__icon 
+                    <TextIcon
+                        className={`ids-option-button__icon
                         ids-option-button__text-icon`}
                     />
                 );

@@ -1,8 +1,7 @@
-import * as React from "react";
 import cx from "classnames";
-import { useButton, type AriaButtonProps, FocusRing } from "react-aria";
+import * as React from "react";
+import { FocusRing, useButton, type AriaButtonProps } from "react-aria";
 
-import HelpSolid from "@igloo-ui/icons/dist/HelpSolid";
 import Alignment from "@igloo-ui/icons/dist/Alignment";
 import Checkmark from "@igloo-ui/icons/dist/Checkmark";
 
@@ -50,12 +49,6 @@ const Metric: React.FunctionComponent<MetricProps> = ({
     ...rest
 }: MetricProps) => {
     const btnRef = React.useRef<HTMLButtonElement>(null);
-
-    const getBrand = (): string => {
-        return document.documentElement.getAttribute("data-brand") ?? "igloo";
-    };
-
-    const isWorkleap = getBrand() === "workleap";
 
     const { buttonProps } = useButton(rest, btnRef);
 
@@ -109,8 +102,7 @@ const Metric: React.FunctionComponent<MetricProps> = ({
                     >
                         {tooltip && appearance !== "selected" && (
                             <Tooltip content={tooltip}>
-                                {isWorkleap ? (
-                                    <QuestionIcon size="sm" />) : <HelpSolid size="small" />}
+                                <QuestionIcon size="sm" />
                             </Tooltip>
                         )}
                         {type !== "subMetric" && appearance === "selected" && (

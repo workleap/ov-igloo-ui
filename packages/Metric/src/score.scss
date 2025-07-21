@@ -7,32 +7,6 @@
 @layer igloo {
     :root {
         /* Default */
-        --ids-score-font-family: #{tokens.$secondary-font-family};
-        --ids-score-font-size: #{tokens.$font-size-5};
-        --ids-score-font-weight: #{tokens.$font-weight-medium};
-        --ids-score-color: #{tokens.$grey-800};
-        --ids-score-line-height: #{tokens.$line-height-xl};
-
-        /* Variation */
-        --ids-score-variation-font-family: #{tokens.$primary-font-family};
-        --ids-score-variation-font-size: #{tokens.$font-size-3};
-        --ids-score-variation-font-weight: #{tokens.$font-weight-regular};
-        --ids-score-variation-margin-left: 0;
-        --ids-score-variation-line-height: #{tokens.$line-height-xxl};
-        --ids-score-single-variation-font-size: #{tokens.$font-size-9};
-        --ids-score-single-variation-color: #{tokens.$grey-600};
-        --ids-score-single-variation-line-height: #{tokens.$line-height-xxxs};
-
-        /* Arrows */
-        --ids-score-arrow-color-positive: #{tokens.$seaweed-500};
-        --ids-score-arrow-color-negative: #{tokens.$coral-500};
-        --ids-score-arrow-color-selected-positive: #{tokens.$electric-blue-500};
-        --ids-score-arrow-color-selected-negative: #{tokens.$electric-blue-500};
-        --ids-score-arrow-margin-right: #{tokens.$space-1};
-    }
-
-    [data-brand="workleap"] {
-        /* Default */
         --ids-score-font-family: var(--hop-heading-sm-font-family);
         --ids-score-font-size: var(--hop-heading-sm-font-size);
         --ids-score-font-weight: var(--hop-heading-sm-font-weight);
