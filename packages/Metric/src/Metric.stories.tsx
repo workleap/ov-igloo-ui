@@ -3,7 +3,6 @@ import React from 'react';
   import { Meta, StoryObj } from '@storybook/react';
 
   import Wellness from '@igloo-ui/icons/dist/Wellness';
-import WellnessSolid from '@igloo-ui/icons/dist/WellnessSolid';
 
   import Section from '@components/section';
 import readme from '../README.md';
@@ -90,8 +89,7 @@ import readme from '../README.md';
   };
 
   export const Score: Story = {
-    render: (_args, {globals: {brand}}) => {
-      return (
+    render: () => (
         <Section>
           <Metric
             value={20}
@@ -114,12 +112,11 @@ import readme from '../README.md';
             variation={3}
             label="Selected"
             appearance="selected"
-            icon={brand === "workleap" ? <Wellness size="medium" /> : <WellnessSolid size="medium" />}
+            icon={<Wellness size="medium" />}
             type="score"
           />
         </Section>
-      );
-    },
+      )
   };
 
   export const SubMetric: Story = {

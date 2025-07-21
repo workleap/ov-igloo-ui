@@ -1,6 +1,5 @@
 import React from 'react';
 
-import tokens from '@igloo-ui/tokens/dist/base10/tokens.json';
 import { Meta, StoryObj } from '@storybook/react';
 
 import Section from '@components/section';
@@ -24,31 +23,19 @@ export default {
 type Story = StoryObj<typeof PieChart>;
 
 const mockData = [
-  { id: 'positive', percentage: 25, color: tokens.seaweed400 },
-  { id: 'negative', percentage: 10, color: tokens.coral400 },
-  { id: 'skipped', percentage: 40, color: tokens.creamsicle100 },
-  { id: 'unanswered', percentage: 25, color: tokens.grey300 },
-];
-
-const mockDataWL = [
   { id: 'positive', percentage: 25, color: "var(--hop-status-positive-surface-strong)" },
   { id: 'negative', percentage: 10, color: "var(--hop-status-negative-surface-strong)" },
   { id: 'skipped', percentage: 40, color: "var(--hop-upsell-surface-selected)" },
   { id: 'unanswered', percentage: 25, color: "var(--hop-neutral-surface-disabled)" },
 ];
 
-const getMockData = (brand: string) => {
-  const data = brand === 'workleap' ? mockDataWL : mockData;
-  return data;
-}
-
 export const Overview: Story = {
-  render: (args, { globals: { brand } }) => {
+  render: (args) => {
     return (
       <Section>
         <PieChart
           {...args}
-          data={getMockData(brand)}
+          data={mockData}
         />
       </Section>
     );
@@ -81,17 +68,17 @@ export const Empty: Story = {
 
 
 export const Sizes: Story = {
-  render: (_args, { globals: { brand } }) => {
+  render: () => {
     return (
       <Section>
         <PieChart
-          data={getMockData(brand)}
+          data={mockData}
           label="Poll Completion"
           size="regular"
           rate={35}
         />
         <PieChart
-          data={getMockData(brand)}
+          data={mockData}
           label="Poll Completion"
           size="large"
           rate={35}
