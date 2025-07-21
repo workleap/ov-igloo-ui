@@ -1,5 +1,21 @@
 # @igloo-ui/datepicker
 
+## 0.9.0
+
+### Minor Changes
+
+- da47695: Clean up non-Workleap rebranded styles for components A-D.
+  All consumers should now be using the Workleap branded versions of the components. This will happen automatically, and consumers can stop setting `data-brand="workleap"` for these components.
+
+### Patch Changes
+
+- Updated dependencies [da47695]
+- Updated dependencies [08f9a05]
+  - @igloo-ui/dropdown@2.0.0
+  - @igloo-ui/button@0.11.0
+  - @igloo-ui/icon-button@2.0.0
+  - @igloo-ui/input@3.0.0
+
 ## 0.8.2
 
 ### Patch Changes

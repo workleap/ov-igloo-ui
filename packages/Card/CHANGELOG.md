@@ -1,5 +1,12 @@
 # @igloo-ui/card
 
+## 0.3.0
+
+### Minor Changes
+
+- da47695: Clean up non-Workleap rebranded styles for components A-D.
+  All consumers should now be using the Workleap branded versions of the components. This will happen automatically, and consumers can stop setting `data-brand="workleap"` for these components.
+
 ## 0.2.5
 
 ### Patch Changes

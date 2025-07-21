@@ -1,5 +1,17 @@
 # @igloo-ui/stacked-bar
 
+## 0.6.0
+
+### Minor Changes
+
+- 85a8ac9: Clean up non-Workleap rebranded styles for components Q-Z.
+  All consumers should now be using the Workleap branded versions of the components. This will happen automatically, and consumers can stop setting `data-brand="workleap"` for these components.
+
+### Patch Changes
+
+- Updated dependencies [08f9a05]
+  - @igloo-ui/popover@0.8.0
+
 ## 0.5.1
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # @igloo-ui/color-picker
 
+## 2.0.0
+
+### Major Changes
+
+- da47695: Clean up non-Workleap rebranded styles for components A-D.
+  All consumers should now be using the Workleap branded versions of the components. This will happen automatically, and consumers can stop setting `data-brand="workleap"` for these components.
+
+### Patch Changes
+
+- Updated dependencies [da47695]
+  - @igloo-ui/dropdown@2.0.0
+  - @igloo-ui/color@0.6.0
+
 ## 1.0.8
 
 ### Patch Changes

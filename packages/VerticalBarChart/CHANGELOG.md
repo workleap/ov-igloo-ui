@@ -1,5 +1,12 @@
 # @igloo-ui/vertical-bar-chart
 
+## 0.4.0
+
+### Minor Changes
+
+- 85a8ac9: Clean up non-Workleap rebranded styles for components Q-Z.
+  All consumers should now be using the Workleap branded versions of the components. This will happen automatically, and consumers can stop setting `data-brand="workleap"` for these components.
+
 ## 0.3.5
 
 ### Patch Changes
