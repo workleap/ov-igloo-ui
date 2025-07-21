@@ -6,8 +6,8 @@ import Section from '@components/section';
 import readme from '../README.md';
 
 import FormGroup from '@igloo-ui/form-group';
-import { mockData, memberMockData } from './data';
-import TagPicker, { TagItem, Keys } from './TagPicker';
+import { memberMockData, mockData } from './data';
+import TagPicker, { Keys, TagItem } from './TagPicker';
 
 export default {
   title: 'Components/TagPicker',
@@ -17,7 +17,8 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
+    },
+    brand: "workleap",
   },
   decorators: [
     (Story) => (

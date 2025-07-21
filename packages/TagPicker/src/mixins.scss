@@ -1,14 +1,6 @@
 @use '~@igloo-ui/tokens/dist/base10/variables' as tokens;
 
 :root {
-    --ids-scrollbar-color: #{tokens.$grey-300};
-    --ids-scrollbar-border-color: #{tokens.$samoyed};
-    --ids-scrollbar-border-size: 1rem;
-    --ids-scrollbar-size: 0.2rem;
-    --ids-scrollbar-radii: #{tokens.$border-radius-md};
-}
-
-[data-brand="workleap"] {
     --ids-scrollbar-color: var(--hop-neutral-border-weak);
     --ids-scrollbar-border-color: var(--hop-neutral-surface);
     --ids-scrollbar-border-size: 0.625rem;

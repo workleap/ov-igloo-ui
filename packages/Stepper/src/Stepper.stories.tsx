@@ -6,7 +6,7 @@ import Button from '@igloo-ui/button';
 
 import readme from '../README.md';
 
-import Stepper, {Step} from './Stepper';
+import Stepper, { Step } from './Stepper';
 
 export default {
   title: 'Components/Stepper',
@@ -16,8 +16,9 @@ export default {
       description: {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
-    }
-  }
+    },
+    brand: "workleap",
+  },
 } as Meta<typeof Stepper>;
 
 type Story = StoryObj<typeof Stepper>;
