@@ -95,7 +95,8 @@ export const info = () => {
 
 export const OtherFormElements: StoryObj<typeof FormGroup> = {
     parameters: {
-        brand: "workleap"
+        brand: "workleap",
+        chromatic: { delay: 500 }
     },
     render: () => {
         const smallOptionList = [

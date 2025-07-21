@@ -124,7 +124,8 @@ export const removeClose = () => {
 
 export const WithSelect: StoryObj<typeof Modal> = {
     parameters: {
-        brand: "workleap"
+        brand: "workleap",
+        chromatic: { delay: 500 }
     },
     render: () => {
         const [show, setShow] = useState(isChromatic());
