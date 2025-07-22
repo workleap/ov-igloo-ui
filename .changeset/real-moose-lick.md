@@ -3,7 +3,6 @@
 "@igloo-ui/breadcrumb": patch
 "@igloo-ui/button": patch
 "@igloo-ui/checkbox": patch
-"@igloo-ui/color": patch
 "@igloo-ui/combobox": patch
 "@igloo-ui/datepicker": patch
 "@igloo-ui/disclosure": patch
