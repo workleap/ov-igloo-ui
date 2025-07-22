@@ -52,9 +52,9 @@
         /* Premium */
         --ids-btn-text-premium: var(--hop-upsell-text);
         --ids-btn-text-premium-disabled: var(--hop-neutral-text-disabled);
+        --ids-btn-text-premium-active: var(--hop-upsell-text-selected);
         --ids-btn-text-premium-hover: var(--hop-upsell-text-hover);
         --ids-btn-text-premium-pressed: var(--hop-upsell-text-press);
-        --ids-btn-text-premium-active: var(--hop-upsell-text-selected);
         --ids-btn-border-premium-active: var(--hop-upsell-border-selected);
         --ids-btn-background-premium: var(--hop-upsell-surface);
         --ids-btn-background-premium-hover: var(--hop-upsell-surface-hover);
@@ -64,6 +64,7 @@
 
         /* Danger */
         --ids-btn-text-danger: var(--hop-danger-text-strong);
+        --ids-btn-text-danger-disabled: #{tokens.$samoyed};
         --ids-btn-text-danger-active: var(--hop-danger-text-selected);
         --ids-btn-border-danger-active: var(--hop-danger-border-selected);
         --ids-btn-background-danger: var(--hop-danger-surface-strong);
