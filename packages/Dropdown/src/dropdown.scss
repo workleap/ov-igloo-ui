@@ -14,11 +14,15 @@
         --ids-dropdown-background: var(--hop-neutral-surface);
         --ids-dropdown-border: 0.0625rem solid var(--hop-neutral-border-weak);
         --ids-dropdown-border-radius: var(--hop-shape-rounded-md);
+        --ids-dropdown-zindex: #{tokens.$z-index-100};
         --ids-dropdown-box-shadow: var(--hop-elevation-lifted);
         --ids-dropdown-padding: 0;
         --ids-dropdown-padding-small: var(--hop-space-inset-md);
         --ids-dropdown-padding-medium: var(--hop-space-inset-lg);
         --ids-dropdown-padding-large: var(--hop-space-inset-xl);
+
+        /* Click Handler */
+        --ids-dropdown-zindex-click-handler: #{tokens.$z-index-90};
 
         /* Footer */
         --ids-dropdown-footer-background: var(--hop-neutral-surface);

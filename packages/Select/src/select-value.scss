@@ -8,6 +8,9 @@
         /* Compact **/
         --ids-select-value-padding-compact: calc(var(--hop-space-stack-sm) - var(--ids-select-border-width) * 2) var(--hop-space-inline-md);
 
+        /* Disabled */
+        --ids-select-value-color-disabled: #{tokens.$grey-500};
+
         /* Placeholder */
         --ids-select-value-color-placeholder: var(--hop-neutral-text-weakest);
 

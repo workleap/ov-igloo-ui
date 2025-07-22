@@ -64,8 +64,6 @@ const ComboboxInput: React.FunctionComponent<ComboboxInputProps> = ({
     ...rest
 }: ComboboxInputProps) => {
     const chevronClass = "ids-combobox-input__chevron";
-    const chevronUpIcon = <AngleUpIcon className={chevronClass} size="sm" />
-    const chevronDownIcon = <AngleDownIcon className={chevronClass} size="sm" />
 
     const handleChange = ({
         target
@@ -142,9 +140,9 @@ const ComboboxInput: React.FunctionComponent<ComboboxInputProps> = ({
               clearBtn
           ))}
                 {isOpen ? (
-                    chevronUpIcon
+                    <AngleUpIcon className={chevronClass} size="sm" />
                 ) : (
-                    chevronDownIcon
+                    <AngleDownIcon className={chevronClass} size="sm" />
                 )}
             </div>
         </div>

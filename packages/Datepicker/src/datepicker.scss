@@ -9,6 +9,8 @@
         // Calculation of the width of the datepicker to obtain a square cell
       --ids-datepicker-cell-size: 2.5rem;
       --ids-datepicker-cell-number: 7;
+      --ids-datepicker-cell-border: .2rem;
+      --ids-datepicker-cell-empty-border: calc(6 * .05rem);
 
       /* Default */
       --ids-datepicker-font-family: var(--hop-body-sm-font-family);

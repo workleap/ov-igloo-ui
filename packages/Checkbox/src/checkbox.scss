@@ -7,11 +7,11 @@
 @layer igloo {
     :root {
         --ids-checkbox-font-family: #{tokens.$primary-font-family};
-        --ids-checkbox-font-size: var(--hop-body-sm-font-size);
         --ids-checkbox-font-weight: var(--hop-body-sm-font-weight);
-        --ids-checkbox-line-height: var(--hop-body-sm-line-height);
+        --ids-checkbox-font-size: var(--hop-body-sm-font-size);
         --ids-checkbox-focus: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.2188rem var(--hop-primary-border-focus);
         --ids-checkbox-size: 1rem;
+        --ids-checkbox-line-height: var(--hop-body-sm-line-height);
         --ids-checkbox-radius: var(--hop-shape-rounded-sm);
         --ids-checkbox-check: var(--hop-neutral-icon-selected);
         --ids-checkbox-margin: var(--hop-space-inline-sm);
@@ -42,6 +42,8 @@
 
         /* Completion */
         --ids-checkbox-completion-size: 1.5rem;
+        --ids-checkbox-completion-radius: 50%;
+        --ids-checkbox-one-px: 0.1rem;
         --ids-checkbox-completion-border-disabled: var(--hop-neutral-border-disabled);
         --ids-checkbox-completion-check-color-disabled: var(--hop-neutral-icon-disabled);
         --ids-checkbox-completion-check-color-hover: transparent;
