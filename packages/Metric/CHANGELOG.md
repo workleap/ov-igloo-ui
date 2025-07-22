@@ -1,5 +1,17 @@
 # @igloo-ui/metric
 
+## 0.5.0
+
+### Minor Changes
+
+- 08f9a05: Clean up non-Workleap rebranded styles for components E-P.
+  All consumers should now be using the Workleap branded versions of the components. This will happen automatically, and consumers can stop setting `data-brand="workleap"` for these components.
+
+### Patch Changes
+
+- Updated dependencies [85a8ac9]
+  - @igloo-ui/tooltip@4.0.0
+
 ## 0.4.3
 
 ### Patch Changes
