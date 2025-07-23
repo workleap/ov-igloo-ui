@@ -1,5 +1,11 @@
 # @igloo-ui/area-chart
 
+## 2.0.1
+
+### Patch Changes
+
+- 3e2d9f0: Restore CSS variables accidentally removed during cleanup
+
 ## 2.0.0
 
 ### Major Changes

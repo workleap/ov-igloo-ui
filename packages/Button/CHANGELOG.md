@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.11.1
+
+### Patch Changes
+
+- 3e2d9f0: Restore CSS variables accidentally removed during cleanup
+
 ## 0.11.0
 
 ### Minor Changes

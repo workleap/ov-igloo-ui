@@ -1,5 +1,14 @@
 # @igloo-ui/datepicker
 
+## 0.9.1
+
+### Patch Changes
+
+- 3e2d9f0: Restore CSS variables accidentally removed during cleanup
+- Updated dependencies [3e2d9f0]
+  - @igloo-ui/button@0.11.1
+  - @igloo-ui/dropdown@2.0.1
+
 ## 0.9.0
 
 ### Minor Changes

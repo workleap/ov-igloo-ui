@@ -1,5 +1,13 @@
 # @igloo-ui/text-editor
 
+## 0.10.1
+
+### Patch Changes
+
+- 3e2d9f0: Restore CSS variables accidentally removed during cleanup
+- Updated dependencies [3e2d9f0]
+  - @igloo-ui/button@0.11.1
+
 ## 0.10.0
 
 ### Minor Changes
