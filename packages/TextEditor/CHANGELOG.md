@@ -1,5 +1,13 @@
 # @igloo-ui/text-editor
 
+## 0.10.2
+
+### Patch Changes
+
+- 60cd3ba: Bump components that depend upon the list or tabs
+- Updated dependencies [60cd3ba]
+  - @igloo-ui/button@0.11.2
+
 ## 0.10.1
 
 ### Patch Changes

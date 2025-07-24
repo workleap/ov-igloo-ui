@@ -1,5 +1,13 @@
 # @igloo-ui/list
 
+## 0.11.1
+
+### Patch Changes
+
+- 6e3453c: Fix redundant CSS layer declarations
+- Updated dependencies [60cd3ba]
+  - @igloo-ui/checkbox@0.6.2
+
 ## 0.11.0
 
 ### Minor Changes

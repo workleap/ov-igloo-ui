@@ -1,5 +1,11 @@
 # @igloo-ui/area-chart
 
+## 2.0.2
+
+### Patch Changes
+
+- 60cd3ba: Bump components that depend upon the list or tabs
+
 ## 2.0.1
 
 ### Patch Changes

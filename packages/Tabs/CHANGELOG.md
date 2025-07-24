@@ -1,5 +1,11 @@
 # @igloo-ui/tabs
 
+## 2.0.1
+
+### Patch Changes
+
+- 6e3453c: Fix redundant CSS layer declarations
+
 ## 2.0.0
 
 ### Major Changes

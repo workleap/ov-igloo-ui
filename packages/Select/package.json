@@ -1,6 +1,6 @@
 {
     "name": "@igloo-ui/select",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "main": "dist/Select.js",
     "module": "dist/Select.js",
     "types": "dist/Select.d.ts",
@@ -24,8 +24,8 @@
         "build": "rollup -c rollup.config.js"
     },
     "dependencies": {
-        "@igloo-ui/dropdown": "^2.0.1",
-        "@igloo-ui/list": "^0.11.0",
+        "@igloo-ui/dropdown": "^2.0.2",
+        "@igloo-ui/list": "^0.11.1",
         "@igloo-ui/icons": "^1.12.2",
         "@igloo-ui/icon-button": "^2.0.0",
         "@igloo-ui/input": "^3.0.0",
