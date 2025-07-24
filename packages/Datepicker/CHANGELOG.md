@@ -1,5 +1,14 @@
 # @igloo-ui/datepicker
 
+## 0.9.2
+
+### Patch Changes
+
+- 60cd3ba: Bump components that depend upon the list or tabs
+- Updated dependencies [60cd3ba]
+  - @igloo-ui/button@0.11.2
+  - @igloo-ui/dropdown@2.0.2
+
 ## 0.9.1
 
 ### Patch Changes

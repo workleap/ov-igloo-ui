@@ -1,5 +1,15 @@
 # @igloo-ui/combobox
 
+## 3.0.2
+
+### Patch Changes
+
+- 60cd3ba: Bump components that depend upon the list or tabs
+- Updated dependencies [6e3453c]
+- Updated dependencies [60cd3ba]
+  - @igloo-ui/list@0.11.1
+  - @igloo-ui/dropdown@2.0.2
+
 ## 3.0.1
 
 ### Patch Changes
