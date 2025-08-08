@@ -1,5 +1,11 @@
 # @igloo-ui/message
 
+## 0.4.2
+
+### Patch Changes
+
+- 60cd3ba: Bump components that depend upon the list or tabs
+
 ## 0.4.1
 
 ### Patch Changes

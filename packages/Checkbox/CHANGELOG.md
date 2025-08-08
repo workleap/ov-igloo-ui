@@ -1,5 +1,11 @@
 # @igloo-ui/checkbox
 
+## 0.6.2
+
+### Patch Changes
+
+- 60cd3ba: Bump components that depend upon the list or tabs
+
 ## 0.6.1
 
 ### Patch Changes

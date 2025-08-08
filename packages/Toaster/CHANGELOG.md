@@ -1,5 +1,11 @@
 # @igloo-ui/toaster
 
+## 3.0.2
+
+### Patch Changes
+
+- 60cd3ba: Bump components that depend upon the list or tabs
+
 ## 3.0.1
 
 ### Patch Changes
