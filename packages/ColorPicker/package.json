@@ -1,6 +1,6 @@
 {
   "name": "@igloo-ui/color-picker",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "dist/ColorPicker.js",
   "module": "dist/ColorPicker.js",
   "types": "dist/ColorPicker.d.ts",
@@ -15,7 +15,7 @@
   ],
   "license": "Apache-2.0",
   "peerDependencies": {
-    "@igloo-ui/provider": ">=0.1.5",
+    "@igloo-ui/provider": ">=0.1.6",
     "react": ">= 16.8.6"
   },
   "files": [
@@ -25,8 +25,8 @@
     "build": "rollup -c rollup.config.js"
   },
   "dependencies": {
-    "@igloo-ui/color": "^0.6.0",
-    "@igloo-ui/dropdown": "^2.0.0",
+    "@igloo-ui/color": "^0.6.1",
+    "@igloo-ui/dropdown": "^2.0.3",
     "@igloo-ui/tokens": "^2.1.0",
     "@hopper-ui/tokens": "^5.0.0",
     "classnames": "^2.3.2",
@@ -35,7 +35,7 @@
     "react-stately": "^3.30.1"
   },
   "devDependencies": {
-    "@igloo-ui/provider": "^0.1.5"
+    "@igloo-ui/provider": "^0.1.6"
   },
   "browserslist": [
     "> 1%",

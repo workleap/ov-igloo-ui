@@ -1,6 +1,6 @@
 {
     "name": "@igloo-ui/text-editor",
-    "version": "0.10.2",
+    "version": "0.10.3",
     "main": "dist/TextEditor.js",
     "module": "dist/TextEditor.js",
     "types": "dist/TextEditor.d.ts",
@@ -15,7 +15,7 @@
     ],
     "license": "Apache-2.0",
     "peerDependencies": {
-        "@igloo-ui/provider": ">=0.1.5",
+        "@igloo-ui/provider": ">=0.1.6",
         "react": ">= 16.8.6"
     },
     "files": [
@@ -26,12 +26,12 @@
     },
     "dependencies": {
         "@floating-ui/react": "^0.27.3",
-        "@igloo-ui/button": "^0.11.2",
-        "@igloo-ui/icon-button": "^2.0.0",
-        "@igloo-ui/input": "^3.0.0",
+        "@igloo-ui/button": "^0.11.3",
+        "@igloo-ui/icon-button": "^2.0.1",
+        "@igloo-ui/input": "^3.0.1",
         "@igloo-ui/tokens": "^2.1.0",
         "@hopper-ui/tokens": "^5.0.0",
-        "@igloo-ui/tooltip": "^4.0.0",
+        "@igloo-ui/tooltip": "^4.0.1",
         "@lexical/code": "^0.13.0",
         "@lexical/link": "^0.13.0",
         "@lexical/list": "^0.13.0",
@@ -46,7 +46,7 @@
         "lexical": "^0.13.0"
     },
     "devDependencies": {
-        "@igloo-ui/provider": "^0.1.5"
+        "@igloo-ui/provider": "^0.1.6"
     },
     "browserslist": [
         "> 1%",

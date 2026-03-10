@@ -1,5 +1,13 @@
 # @igloo-ui/list
 
+## 0.11.2
+
+### Patch Changes
+
+- 414d9f3: Upgrade @hopper-ui/tokens from v4 to v5 and update token CSS imports to use the workleap theme path (`@hopper-ui/tokens/workleap/tokens.css`)
+- Updated dependencies [414d9f3]
+  - @igloo-ui/checkbox@0.6.3
+
 ## 0.11.1
 
 ### Patch Changes

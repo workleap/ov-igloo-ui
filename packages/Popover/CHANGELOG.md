@@ -1,5 +1,14 @@
 # @igloo-ui/popover
 
+## 0.8.1
+
+### Patch Changes
+
+- 414d9f3: Upgrade @hopper-ui/tokens from v4 to v5 and update token CSS imports to use the workleap theme path (`@hopper-ui/tokens/workleap/tokens.css`)
+- Updated dependencies [414d9f3]
+  - @igloo-ui/icon-button@2.0.1
+  - @igloo-ui/provider@0.1.6
+
 ## 0.8.0
 
 ### Minor Changes
