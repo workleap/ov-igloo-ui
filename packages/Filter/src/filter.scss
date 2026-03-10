@@ -2,7 +2,7 @@
 @use '~@igloo-ui/tokens/dist/fonts';
 
 @import url("~@hopper-ui/tokens/fonts.css") layer(hopper-design-system);
-@import url("~@hopper-ui/tokens/tokens.css") layer(hopper-design-system);
+@import url("~@hopper-ui/tokens/workleap/tokens.css") layer(hopper-design-system);
 
 @layer igloo {
     :root {

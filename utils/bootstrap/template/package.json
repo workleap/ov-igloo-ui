@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@igloo-ui/tokens": "^2.1.0",
-    "@hopper-ui/tokens": "^4.3.2"
+    "@hopper-ui/tokens": "^5.0.0"
   },
   "browserslist": [
     "> 1%",
