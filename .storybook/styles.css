@@ -1,5 +1,5 @@
 @import url('~@igloo-ui/tokens/dist/base10/variables.css') layer(igloo-design-system);
-@import url('~@hopper-ui/tokens/tokens.css') layer(hopper-design-system);
+@import url('~@hopper-ui/tokens/workleap/tokens.css') layer(hopper-design-system);
 
 @layer igloo-design-system, hopper-icons, hopper-design-system, igloo;
 
