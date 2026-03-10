@@ -1,5 +1,14 @@
 # @igloo-ui/action-menu
 
+## 2.0.1
+
+### Patch Changes
+
+- 414d9f3: Upgrade @hopper-ui/tokens from v4 to v5 and update token CSS imports to use the workleap theme path (`@hopper-ui/tokens/workleap/tokens.css`)
+- Updated dependencies [414d9f3]
+  - @igloo-ui/dropdown@2.0.3
+  - @igloo-ui/list@0.11.2
+
 ## 2.0.0
 
 ### Major Changes

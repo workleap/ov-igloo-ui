@@ -1,5 +1,17 @@
 # @igloo-ui/datepicker
 
+## 0.9.3
+
+### Patch Changes
+
+- 414d9f3: Upgrade @hopper-ui/tokens from v4 to v5 and update token CSS imports to use the workleap theme path (`@hopper-ui/tokens/workleap/tokens.css`)
+- Updated dependencies [414d9f3]
+  - @igloo-ui/button@0.11.3
+  - @igloo-ui/dropdown@2.0.3
+  - @igloo-ui/icon-button@2.0.1
+  - @igloo-ui/input@3.0.1
+  - @igloo-ui/provider@0.1.6
+
 ## 0.9.2
 
 ### Patch Changes

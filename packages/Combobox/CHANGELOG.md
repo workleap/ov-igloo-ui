@@ -1,5 +1,18 @@
 # @igloo-ui/combobox
 
+## 3.0.3
+
+### Patch Changes
+
+- 414d9f3: Upgrade @hopper-ui/tokens from v4 to v5 and update token CSS imports to use the workleap theme path (`@hopper-ui/tokens/workleap/tokens.css`)
+- Updated dependencies [414d9f3]
+  - @igloo-ui/dropdown@2.0.3
+  - @igloo-ui/icon-button@2.0.1
+  - @igloo-ui/input@3.0.1
+  - @igloo-ui/list@0.11.2
+  - @igloo-ui/provider@0.1.6
+  - @igloo-ui/tooltip@4.0.1
+
 ## 3.0.2
 
 ### Patch Changes

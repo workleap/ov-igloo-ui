@@ -1,5 +1,13 @@
 # @igloo-ui/stepper
 
+## 0.6.1
+
+### Patch Changes
+
+- 414d9f3: Upgrade @hopper-ui/tokens from v4 to v5 and update token CSS imports to use the workleap theme path (`@hopper-ui/tokens/workleap/tokens.css`)
+- Updated dependencies [414d9f3]
+  - @igloo-ui/tooltip@4.0.1
+
 ## 0.6.0
 
 ### Minor Changes
