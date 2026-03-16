@@ -27,7 +27,6 @@ export default {
       }
     },
     chromatic: { disableSnapshot: true },
-    brand: "workleap"
   },
   args: {
     children: 'Playground tooltip',

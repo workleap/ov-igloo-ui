@@ -16,7 +16,6 @@ export default {
       }
     },
     chromatic: { delay: 600 },
-    brand: "workleap"
   },
 } as Meta<typeof BarChart>;
 

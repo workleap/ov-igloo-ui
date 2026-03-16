@@ -19,7 +19,6 @@ const meta: Meta<typeof Button> = {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       },
     },
-    brand: "workleap"
   },
   argTypes: {
     children: { description: 'The content to display inside the button' },
