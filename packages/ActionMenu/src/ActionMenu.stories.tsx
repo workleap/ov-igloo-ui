@@ -88,7 +88,6 @@ export default {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, '').replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
     },
-    brand: "workleap"
   },
   argTypes: {
     closeOnSelect: {

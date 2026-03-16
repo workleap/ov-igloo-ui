@@ -18,7 +18,6 @@ import readme from '../README.md';
             component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
             }
         },
-        brand: "workleap"
     },
     argTypes: {
       icon: { control: { type: null } },

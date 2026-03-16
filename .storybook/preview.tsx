@@ -11,10 +11,9 @@ import React from 'react';
 import IglooProvider from "@igloo-ui/provider";
 
 import './styles.css';
-import { withBrandDecorator } from './withBrandDecorator';
 
 const preview: Preview = {
-  decorators: [withBrandDecorator,
+  decorators: [
     (StoryFn, context) => {
       return (
               <IglooProvider locale={context.globals.locale}>
@@ -23,22 +22,6 @@ const preview: Preview = {
       );
   }],
   globalTypes: {
-    brand: {
-      description: 'Global brand for components',
-      defaultValue: 'igloo',
-      toolbar: {
-        title: 'Brand',
-        icon: 'circlehollow',
-        items: [{
-          value: 'igloo',
-          title: 'Igloo',
-        }, {
-          value: 'workleap',
-          title: 'Workleap',
-        }],
-        dynamicTitle: true,
-      },
-    },
     locale: {
         description: "Internationalization locale",
         defaultValue: "en-US",

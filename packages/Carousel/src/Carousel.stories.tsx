@@ -17,7 +17,6 @@ export default {
         component: readme.replace(/<Example is="custom" \/>/g, '').replace(/<ReferenceLinks is="custom" \/>/g, ''),
       }
     },
-    brand: "workleap"
   },
   args: {
     currentSlide: 0,

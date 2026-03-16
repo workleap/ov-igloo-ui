@@ -20,7 +20,6 @@ export default {
       }
     },
     chromatic: { pauseAnimationAtEnd: true },
-    brand: "workleap"
   },
 } as Meta<typeof Dialog>;
 

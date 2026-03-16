@@ -27,7 +27,6 @@ export default {
         'underline',
       ],
     },
-    brand: "workleap"
   },
   argTypes: {
     size: {

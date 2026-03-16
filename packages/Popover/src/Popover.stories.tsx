@@ -20,7 +20,6 @@ export default {
       }
     },
     chromatic: { diffThreshold: 0.792 },
-    brand: "workleap"
   },
   argTypes: {
     children: {

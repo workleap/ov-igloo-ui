@@ -17,7 +17,6 @@ export default {
             },
         },
         chromatic: {delay: 1000},
-        brand: "workleap"
     },
     argTypes: {
         locale: {
