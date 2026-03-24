@@ -1,5 +1,18 @@
 # @igloo-ui/modal
 
+## 3.0.0
+
+### Minor Changes
+
+- 1d02092: Externalize runtime dependencies in rollup build to eliminate duplication.
+
+### Patch Changes
+
+- Updated dependencies [1d02092]
+  - @igloo-ui/carousel@0.5.0
+  - @igloo-ui/icon-button@2.1.0
+  - @igloo-ui/provider@0.2.0
+
 ## 2.0.1
 
 ### Patch Changes

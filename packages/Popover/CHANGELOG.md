@@ -1,5 +1,17 @@
 # @igloo-ui/popover
 
+## 1.0.0
+
+### Minor Changes
+
+- 1d02092: Externalize runtime dependencies in rollup build to eliminate duplication.
+
+### Patch Changes
+
+- Updated dependencies [1d02092]
+  - @igloo-ui/icon-button@2.1.0
+  - @igloo-ui/provider@0.2.0
+
 ## 0.8.1
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @igloo-ui/breadcrumb
 
+## 1.0.0
+
+### Minor Changes
+
+- 1d02092: Externalize runtime dependencies in rollup build to eliminate duplication.
+
+### Patch Changes
+
+- Updated dependencies [1d02092]
+  - @igloo-ui/provider@0.2.0
+
 ## 0.4.3
 
 ### Patch Changes

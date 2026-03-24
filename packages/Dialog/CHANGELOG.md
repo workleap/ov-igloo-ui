@@ -1,5 +1,17 @@
 # @igloo-ui/dialog
 
+## 0.12.0
+
+### Minor Changes
+
+- 1d02092: Externalize runtime dependencies in rollup build to eliminate duplication.
+
+### Patch Changes
+
+- Updated dependencies [1d02092]
+  - @igloo-ui/button@0.12.0
+  - @igloo-ui/modal@3.0.0
+
 ## 0.11.1
 
 ### Patch Changes

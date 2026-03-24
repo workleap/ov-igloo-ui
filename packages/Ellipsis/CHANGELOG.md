@@ -1,5 +1,11 @@
 # @igloo-ui/ellipsis
 
+## 0.5.0
+
+### Minor Changes
+
+- 1d02092: Externalize runtime dependencies in rollup build to eliminate duplication.
+
 ## 0.4.1
 
 ### Patch Changes
