@@ -1,9 +1,6 @@
 {
   "name": "@igloo-ui/bar-chart",
   "version": "0.5.1",
-  "sideEffects": [
-    "*.css"
-  ],
   "main": "dist/BarChart.js",
   "module": "dist/BarChart.js",
   "types": "dist/BarChart.d.ts",

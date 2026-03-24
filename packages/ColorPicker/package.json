@@ -1,9 +1,6 @@
 {
   "name": "@igloo-ui/color-picker",
   "version": "2.0.1",
-  "sideEffects": [
-    "*.css"
-  ],
   "main": "dist/ColorPicker.js",
   "module": "dist/ColorPicker.js",
   "types": "dist/ColorPicker.d.ts",

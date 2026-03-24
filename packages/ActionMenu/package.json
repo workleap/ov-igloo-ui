@@ -1,9 +1,6 @@
 {
   "name": "@igloo-ui/action-menu",
   "version": "2.0.1",
-  "sideEffects": [
-    "*.css"
-  ],
   "main": "dist/ActionMenu.js",
   "module": "dist/ActionMenu.js",
   "types": "dist/ActionMenu.d.ts",

@@ -1,9 +1,6 @@
 {
   "name": "@igloo-ui/ellipsis",
   "version": "0.4.1",
-  "sideEffects": [
-    "*.css"
-  ],
   "main": "dist/Ellipsis.js",
   "module": "dist/Ellipsis.js",
   "types": "dist/Ellipsis.d.ts",

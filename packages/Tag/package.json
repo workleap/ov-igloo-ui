@@ -1,9 +1,6 @@
 {
   "name": "@igloo-ui/tag",
   "version": "2.0.1",
-  "sideEffects": [
-    "*.css"
-  ],
   "main": "dist/Tag.js",
   "module": "dist/Tag.js",
   "types": "dist/Tag.d.ts",

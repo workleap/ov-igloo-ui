@@ -1,9 +1,6 @@
 {
   "name": "@igloo-ui/provider",
   "version": "0.1.6",
-  "sideEffects": [
-    "*.css"
-  ],
   "main": "dist/Provider.js",
   "module": "dist/Provider.js",
   "types": "dist/Provider.d.ts",

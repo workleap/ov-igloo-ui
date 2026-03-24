@@ -1,9 +1,6 @@
 {
   "name": "",
   "version": "",
-  "sideEffects": [
-    "*.css"
-  ],
   "main": "",
   "module": "",
   "types": "",
