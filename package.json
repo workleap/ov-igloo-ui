@@ -37,6 +37,7 @@
     "website"
   ],
   "devDependencies": {
+    "@swc/helpers": "^0.5.17",
     "@babel/core": "7.22.10",
     "@babel/preset-env": "7.22.10",
     "@babel/preset-react": "7.22.5",
