@@ -1,5 +1,18 @@
 # @igloo-ui/alert
 
+## 1.0.0
+
+### Minor Changes
+
+- 1d02092: Externalize runtime dependencies in rollup build to eliminate duplication.
+
+### Patch Changes
+
+- Updated dependencies [1d02092]
+  - @igloo-ui/button@0.12.0
+  - @igloo-ui/icon-button@2.1.0
+  - @igloo-ui/provider@0.2.0
+
 ## 0.12.1
 
 ### Patch Changes

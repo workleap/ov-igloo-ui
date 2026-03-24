@@ -1,5 +1,11 @@
 # @igloo-ui/input
 
+## 3.1.0
+
+### Minor Changes
+
+- 1d02092: Externalize runtime dependencies in rollup build to eliminate duplication.
+
 ## 3.0.1
 
 ### Patch Changes

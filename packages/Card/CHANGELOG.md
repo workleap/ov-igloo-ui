@@ -1,5 +1,11 @@
 # @igloo-ui/card
 
+## 0.4.0
+
+### Minor Changes
+
+- 1d02092: Externalize runtime dependencies in rollup build to eliminate duplication.
+
 ## 0.3.1
 
 ### Patch Changes

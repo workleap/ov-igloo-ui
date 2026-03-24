@@ -1,5 +1,18 @@
 # @igloo-ui/color-picker
 
+## 3.0.0
+
+### Minor Changes
+
+- 1d02092: Externalize runtime dependencies in rollup build to eliminate duplication.
+
+### Patch Changes
+
+- Updated dependencies [1d02092]
+  - @igloo-ui/color@0.7.0
+  - @igloo-ui/dropdown@2.1.0
+  - @igloo-ui/provider@0.2.0
+
 ## 2.0.1
 
 ### Patch Changes

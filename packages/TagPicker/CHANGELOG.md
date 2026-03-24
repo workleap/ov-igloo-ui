@@ -1,5 +1,18 @@
 # @igloo-ui/tag-picker
 
+## 0.17.0
+
+### Minor Changes
+
+- 1d02092: Externalize runtime dependencies in rollup build to eliminate duplication.
+
+### Patch Changes
+
+- Updated dependencies [1d02092]
+  - @igloo-ui/dropdown@2.1.0
+  - @igloo-ui/input@3.1.0
+  - @igloo-ui/tag@3.0.0
+
 ## 0.16.1
 
 ### Patch Changes

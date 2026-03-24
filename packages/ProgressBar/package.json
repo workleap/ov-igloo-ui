@@ -1,6 +1,6 @@
 {
     "name": "@igloo-ui/progress-bar",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "main": "dist/ProgressBar.js",
     "module": "dist/ProgressBar.js",
     "types": "dist/ProgressBar.d.ts",
@@ -29,7 +29,7 @@
         "classnames": "^2.3.2"
     },
     "devDependencies": {
-        "@igloo-ui/helper-text": "^0.4.3"
+        "@igloo-ui/helper-text": "^0.5.0"
     },
     "browserslist": [
         "> 1%",

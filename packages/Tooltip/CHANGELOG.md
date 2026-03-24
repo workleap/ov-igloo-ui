@@ -1,5 +1,11 @@
 # @igloo-ui/tooltip
 
+## 4.1.0
+
+### Minor Changes
+
+- 1d02092: Externalize runtime dependencies in rollup build to eliminate duplication.
+
 ## 4.0.1
 
 ### Patch Changes

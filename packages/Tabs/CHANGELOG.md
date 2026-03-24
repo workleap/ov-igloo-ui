@@ -1,5 +1,11 @@
 # @igloo-ui/tabs
 
+## 2.1.0
+
+### Minor Changes
+
+- 1d02092: Externalize runtime dependencies in rollup build to eliminate duplication.
+
 ## 2.0.2
 
 ### Patch Changes
