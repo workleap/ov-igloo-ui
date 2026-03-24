@@ -45,18 +45,43 @@ function injectCssImport(file) {
     };
 }
 
-const providerPackageName = "@igloo-ui/provider";
+// Runtime dependencies that must NOT be inlined into each package's dist output.
+// These stay in each package's "dependencies" so consumers auto-install them,
+// but rollup treats them as external so the consumer's bundler deduplicates them.
+const externalPatterns = [
+    // React — must be a single instance
+    /^react$/,
+    /^react-dom(\/.*)?$/,
+    // Igloo cross-deps — shared context (same reason as provider, see original comment below)
+    /^@igloo-ui\//,
+    // Hopper tokens
+    /^@hopper-ui\//,
+    // Floating UI
+    /^@floating-ui\//,
+    // Lexical (text-editor)
+    /^lexical$/,
+    /^@lexical\//,
+    // React Aria
+    /^react-aria/,
+    /^@react-aria\//,
+    /^@react-stately\//,
+    /^@internationalized\//,
+    // Other shared runtime deps
+    /^classnames$/,
+    /^framer-motion(\/.*)?$/,
+    /^recharts(\/.*)?$/,
+    /^luxon$/,
+    /^graphemer$/,
+    /^autosize$/,
+    /^use-sync-external-store(\/.*)?$/
+];
+
+function isExternal(id) {
+    return externalPatterns.some(pattern => pattern.test(id));
+}
 
 export function createRollupConfig(packageName) {
     const { component, style } = handleName(packageName);
-
-    const external = ["react"];
-    if (packageName !== providerPackageName) {
-        // @igloo-ui/provider uses a context that needs to be shared with other packages that uses it
-        // as a peer dependency. So any package referencing @igloo-ui/provider should mark it as external,
-        // except the provider itself.
-        external.push(providerPackageName);
-    }
 
     return {
         input: path.resolve(__dirname, `./src/${component}.tsx`),
@@ -66,7 +91,7 @@ export function createRollupConfig(packageName) {
             name: component,
             sourcemap: true
         },
-        external,
+        external: isExternal,
         plugins: [
             postcss({
                 plugins: [autoprefixer(), flexbugs()],
