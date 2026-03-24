@@ -52,7 +52,7 @@ const externalPatterns = [
     // React — must be a single instance
     /^react$/,
     /^react-dom(\/.*)?$/,
-    // Igloo cross-deps — shared context (same reason as provider, see original comment below)
+    // Igloo cross-deps — all @igloo-ui/* packages are externalized so they share a single copy of React context, styles, and utilities across packages
     /^@igloo-ui\//,
     // Hopper tokens
     /^@hopper-ui\//,
@@ -64,6 +64,7 @@ const externalPatterns = [
     // React Aria
     /^react-aria/,
     /^@react-aria\//,
+    /^react-stately(\/.*)?$/,
     /^@react-stately\//,
     /^@internationalized\//,
     // Other shared runtime deps
