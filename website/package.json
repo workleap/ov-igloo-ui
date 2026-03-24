@@ -57,8 +57,9 @@
     "@igloo-ui/toggle": "*",
     "@igloo-ui/tooltip": "*",
     "@igloo-ui/vertical-bar-chart": "*",
+    "@swc/helpers": "^0.5.17",
     "fuse.js": "^6.5.3",
-    "next": "^13.2.1",
+    "next": "^14.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

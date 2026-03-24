@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@igloo-ui/dropdown": "^2.0.3",
+    "@igloo-ui/icons": "^1.12.3",
     "@igloo-ui/input": "^3.0.1",
     "@igloo-ui/tag": "^2.0.1",
     "@igloo-ui/tokens": "^2.1.0",

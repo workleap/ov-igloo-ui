@@ -27,6 +27,7 @@
   "dependencies": {
     "@igloo-ui/color": "^0.6.1",
     "@igloo-ui/dropdown": "^2.0.3",
+    "@igloo-ui/icons": "^1.12.3",
     "@igloo-ui/tokens": "^2.1.0",
     "@hopper-ui/tokens": "^5.0.0",
     "classnames": "^2.3.2",
