@@ -1,50 +1,53 @@
 {
-    "name": "@igloo-ui/modal",
-    "version": "2.0.1",
-    "main": "dist/Modal.js",
-    "module": "dist/Modal.js",
-    "types": "dist/Modal.d.ts",
-    "styles": "dist/modal.css",
-    "publishConfig": {
-        "access": "public"
-    },
-    "repository": "git+https://github.com/workleap/ov-igloo-ui.git",
-    "author": "Officevibe Inc.",
-    "contributors": [
-        "Franck franck.gaudin@gsoft.com"
-    ],
-    "license": "Apache-2.0",
-    "peerDependencies": {
-        "@igloo-ui/provider": ">=0.1.6",
-        "react": ">= 16.8.6",
-        "react-dom": ">= 16.8.6"
-    },
-    "files": [
-        "dist"
-    ],
-    "scripts": {
-        "build": "rollup -c rollup.config.js"
-    },
-    "dependencies": {
-        "@igloo-ui/icon-button": "^2.0.1",
-        "@igloo-ui/icons": "^1.12.2",
-        "@igloo-ui/tokens": "^2.1.0",
-        "@hopper-ui/icons-react16": "2.4.0",
-        "@hopper-ui/tokens": "^5.0.0",
-        "@igloo-ui/carousel": "^0.4.1",
-        "@types/react-dom": "18.0.11",
-        "classnames": "^2.3.2",
-        "framer-motion": "^6.5.1",
-        "react-aria": "^3.32.1"
-    },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions",
-        "IE >= 11"
-    ],
-    "devDependencies": {
-        "@igloo-ui/button": "^0.11.3",
-        "@igloo-ui/provider": "^0.1.6",
-        "@igloo-ui/select": "^2.0.3"
-    }
+  "name": "@igloo-ui/modal",
+  "version": "2.0.1",
+  "sideEffects": [
+    "*.css"
+  ],
+  "main": "dist/Modal.js",
+  "module": "dist/Modal.js",
+  "types": "dist/Modal.d.ts",
+  "styles": "dist/modal.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "git+https://github.com/workleap/ov-igloo-ui.git",
+  "author": "Officevibe Inc.",
+  "contributors": [
+    "Franck franck.gaudin@gsoft.com"
+  ],
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "@igloo-ui/provider": ">=0.1.6",
+    "react": ">= 16.8.6",
+    "react-dom": ">= 16.8.6"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "dependencies": {
+    "@igloo-ui/icon-button": "^2.0.1",
+    "@igloo-ui/icons": "^1.12.2",
+    "@igloo-ui/tokens": "^2.1.0",
+    "@hopper-ui/icons-react16": "2.4.0",
+    "@hopper-ui/tokens": "^5.0.0",
+    "@igloo-ui/carousel": "^0.4.1",
+    "@types/react-dom": "18.0.11",
+    "classnames": "^2.3.2",
+    "framer-motion": "^6.5.1",
+    "react-aria": "^3.32.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE >= 11"
+  ],
+  "devDependencies": {
+    "@igloo-ui/button": "^0.11.3",
+    "@igloo-ui/provider": "^0.1.6",
+    "@igloo-ui/select": "^2.0.3"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "name": "@igloo-ui/stacked-bar",
   "version": "0.6.1",
+  "sideEffects": [
+    "*.css"
+  ],
   "main": "dist/StackedBar.js",
   "module": "dist/StackedBar.js",
   "types": "dist/StackedBar.d.ts",

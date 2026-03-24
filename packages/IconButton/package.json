@@ -1,6 +1,9 @@
 {
   "name": "@igloo-ui/icon-button",
   "version": "2.0.1",
+  "sideEffects": [
+    "*.css"
+  ],
   "main": "dist/IconButton.js",
   "module": "dist/IconButton.js",
   "types": "dist/IconButton.d.ts",

@@ -1,6 +1,9 @@
 {
   "name": "@igloo-ui/toaster",
   "version": "3.0.3",
+  "sideEffects": [
+    "*.css"
+  ],
   "main": "dist/Toaster.js",
   "module": "dist/Toaster.js",
   "types": "dist/Toaster.d.ts",

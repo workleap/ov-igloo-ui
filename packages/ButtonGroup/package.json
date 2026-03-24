@@ -1,6 +1,9 @@
 {
   "name": "@igloo-ui/button-group",
   "version": "0.6.1",
+  "sideEffects": [
+    "*.css"
+  ],
   "main": "dist/ButtonGroup.js",
   "module": "dist/ButtonGroup.js",
   "types": "dist/ButtonGroup.d.ts",

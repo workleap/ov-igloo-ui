@@ -1,6 +1,9 @@
 {
   "name": "@igloo-ui/area-chart",
   "version": "2.0.3",
+  "sideEffects": [
+    "*.css"
+  ],
   "main": "dist/AreaChart.js",
   "module": "dist/AreaChart.js",
   "types": "dist/AreaChart.d.ts",
