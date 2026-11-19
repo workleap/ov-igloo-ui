@@ -22,20 +22,24 @@ for (const file of files) {
         const line = stripComment(raw);
         const where = `${file}:${i + 1}`;
 
-        const uses = line.match(/^\s*(?:-\s*)?uses:\s*["']?([^"'\s]+)/);
-        if (uses) {
-            const ref = uses[1];
+        // Matches block style (`uses: x`) and flow style (`- { uses: "x" }`), quoted or not.
+        for (const [, ref] of line.matchAll(/\buses\s*:\s*["']?([^"'\s,}]+)/g)) {
             // Local actions (./path) and docker images are out of scope.
             if (!ref.startsWith("./") && !ref.startsWith("docker://") && !/@[0-9a-f]{40}$/.test(ref)) {
                 errors.push(`${where}: "${ref}" is not pinned to a full commit SHA`);
             }
         }
 
-        if (file.startsWith("chromatic.") && /^\s*contents:\s*write\b/.test(line)) {
-            errors.push(`${where}: Chromatic workflow must not grant "contents: write"`);
+        if (file.startsWith("chromatic.")) {
+            if (/\bcontents\s*:\s*["']?write\b/.test(line)) {
+                errors.push(`${where}: Chromatic workflow must not grant "contents: write"`);
+            }
+            if (/\bpermissions\s*:\s*["']?write-all\b/.test(line)) {
+                errors.push(`${where}: Chromatic workflow must not grant "write-all"`);
+            }
         }
 
-        if (file.startsWith("publish.") && (/^\s*cache:/.test(line) || /uses:\s*actions\/cache[@/]/.test(line))) {
+        if (file.startsWith("publish.") && (/\bcache\s*:/.test(line) || /\buses\s*:\s*["']?actions\/cache\b/.test(line))) {
             errors.push(`${where}: publish workflow must not restore an Actions cache (cache poisoning)`);
         }
     });
