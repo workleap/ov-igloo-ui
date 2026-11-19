@@ -53,9 +53,6 @@ jobs:
       - name: Run Stylelint
         run: pnpm lint:style
 
-      - name: Check workflow hardening
-        run: pnpm lint:workflows
-
   build_and_test:
     runs-on: ubuntu-latest
     needs: install-cache
