@@ -14,33 +14,29 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
+              uses: actions/checkout@v7
+
+            # Reads the pnpm version from package.json "packageManager".
+            - name: Install pnpm
+              uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
 
             - name: Install Node.js
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v7
               with:
                 node-version-file: ".nvmrc"
-
-            - name: Cache yarn dependencies
-              uses: actions/cache@v3
-              id: cache-dependencies
-              with:
-                path: node_modules
-                key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-                restore-keys: |
-                    ${{ runner.os }}-yarn-
+                cache: pnpm
 
             - name: Install Dependencies
-              if: steps.cache-dependencies.outputs.cache-hit != 'true'
-              run: |
-                yarn install --frozen-lockfile
+              run: pnpm install --frozen-lockfile
 
             - name: Create release Pull Request or publish to NPM
               uses: changesets/action@v1
               with:
                   commit: "ci(changesets): version packages"
                   title: "Changeset: New Version"
-                  publish: yarn publish-ci
+                  # Also refreshes pnpm-lock.yaml, since bumped internal ranges are recorded in it.
+                  version: pnpm changeset:version
+                  publish: pnpm publish-ci
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.WORKLEAP_NPM_TOKEN }}

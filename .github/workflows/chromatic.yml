@@ -22,32 +22,28 @@ jobs:
           pull-requests: write
         steps:
           - name: Checkout Commit
-            uses: actions/checkout@v3
+            uses: actions/checkout@v7
             with:
               fetch-depth: 0
 
+          # Reads the pnpm version from package.json "packageManager".
+          - name: Install pnpm
+            uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+
           - name: Install Node.js
-            uses: actions/setup-node@v3
+            uses: actions/setup-node@v7
             with:
               node-version-file: ".nvmrc"
-
-          - name: Cache Node.js modules
-            uses: actions/cache@v3
-            with:
-              path: ~/.npm
-              key: ${{ runner.OS }}-node-${{ hashFiles('**/yarn.lock')}}
-              restore-keys: |
-                        ${{ runner.OS }}-node-
-                        ${{ runner.OS }}-
+              cache: pnpm
 
           - name: Install dependencies
-            run: yarn install --frozen-lockfile
+            run: pnpm install --frozen-lockfile
 
           - name: Run build Shared components
-            run: yarn build:shared
+            run: pnpm build:shared
 
           - name: Run build Components
-            run: yarn build:components
+            run: pnpm build:components
 
           - name: Publish to Chromatic
             uses: chromaui/action@v1

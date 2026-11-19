@@ -28,7 +28,8 @@
     "@igloo-ui/tooltip": "^4.1.0",
     "@hopper-ui/tokens": "^5.0.0",
     "classnames": "^2.3.2",
-    "react-aria": "^3.32.1"
+    "react-aria": "^3.32.1",
+    "@igloo-ui/icons": "^1.12.2"
   },
   "devDependencies": {
     "@igloo-ui/button": "^0.12.0"

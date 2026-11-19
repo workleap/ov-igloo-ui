@@ -1,0 +1,31 @@
+packages:
+  - "packages/*"
+  - "shared/*"
+  - "website"
+
+# Resolve internal "@igloo-ui/*" / "@shared/*" ranges to the local workspace
+# packages (same behaviour as Yarn workspaces), without rewriting package.json.
+linkWorkspacePackages: true
+
+# pnpm ignores non-auth settings in .npmrc; keep the repo's "save-exact" behaviour.
+saveExact: true
+
+# LEAPSEC-403: a package from outside Workleap must be at least 7 days old
+# (10080 minutes) before it can be installed.
+minimumReleaseAge: 10080
+minimumReleaseAgeExclude:
+  - "@workleap/*"
+
+# Dependency install scripts are blocked unless listed here.
+allowBuilds:
+  # Installs the git hooks (lint-staged pre-commit).
+  husky: true
+  # Downloads libvips; used by next/image (website on Netlify) and @storybook/nextjs.
+  sharp: true
+  # Binaries ship as optional dependencies / prebuilds, or the script is not needed.
+  "@netlify/esbuild": false
+  "@parcel/watcher": false
+  "@swc/core": false
+  core-js-pure: false
+  esbuild: false
+  nx: false

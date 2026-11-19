@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": ["es6", "es2015", "dom"],
+    "lib": ["es6", "es2015", "dom", "dom.iterable"],
     "module": "esnext",
     "strict": true,
     "forceConsistentCasingInFileNames": true,

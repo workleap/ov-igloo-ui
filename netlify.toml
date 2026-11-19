@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build:shared && yarn build:components && yarn doc:build"
+  command = "pnpm build:shared && pnpm build:components && pnpm doc:build"
   publish = "website/.next"
 
 [[plugins]]
@@ -10,3 +10,6 @@
 
 [build.environment]
   NODE_OPTIONS = "--max_old_space_size=8192"
+  # @netlify/plugin-nextjs v4 needs a hoisted node_modules with pnpm (Netlify only; local installs stay isolated).
+  # pnpm 12 has no --shamefully-hoist flag, so it is set through pnpm's environment config.
+  PNPM_CONFIG_SHAMEFULLY_HOIST = "true"

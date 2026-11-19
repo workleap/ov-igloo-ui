@@ -29,25 +29,27 @@ import Card from '@igloo-ui/card';
 
 ## Getting Started
 
-Before starting make sure [node](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/) is installed
+Before starting make sure [node](https://nodejs.org/en/) (version in `.nvmrc`) and [pnpm](https://pnpm.io/installation) (version in the `packageManager` field of `package.json`) are installed.
 
 ### Install
 
-After cloning ov-igloo-ui, run `yarn` to install dependencies.
+After cloning ov-igloo-ui, run `pnpm install` to install dependencies.
 
 ```bash
 git clone https://github.com/workleap/ov-igloo-ui.git
 cd ov-igloo-ui
-yarn
-yarn storybook
+pnpm install
+pnpm storybook
 ```
+
+A package from outside Workleap must be at least 7 days old before pnpm installs it (`minimumReleaseAge` in `pnpm-workspace.yaml`).
 
 ### Scripts
 
-- `yarn storybook`: run Storybook
-- `yarn test`: run tests
-- `yarn lint`: check if the JS, TS correspond on standard
-- `yarn lint:style`: check if the style correspond on standard
+- `pnpm storybook`: run Storybook
+- `pnpm test`: run tests
+- `pnpm lint`: check if the JS, TS correspond on standard
+- `pnpm lint:style`: check if the style correspond on standard
 
 ## 🤝 Contributing
 
