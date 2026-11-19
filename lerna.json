@@ -3,6 +3,7 @@
   "packages": ["packages/*", "shared/*", "website"],
   "version": "independent",
   "npmClient": "pnpm",
+  "useWorkspaces": true,
   "command": {
     "version": {
       "message": "chore(release): publish",

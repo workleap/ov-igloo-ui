@@ -33,7 +33,8 @@
   },
   "devDependencies": {
     "@igloo-ui/provider": "^0.2.0",
-    "@types/recharts": "^1.8.29"
+    "@types/recharts": "^1.8.29",
+    "@types/luxon": "^3.4.2"
   },
   "browserslist": [
     "> 1%",
