@@ -30,6 +30,7 @@
     "prepublish-ci": "pnpm build:shared && pnpm build:components",
     "publish-ci": "lerna publish from-package -y",
     "chromatic": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN --only-changed",
+    "changeset:version": "changeset version && pnpm install --lockfile-only",
     "bootstrap": "node utils/bootstrap/component.mjs && pnpm install && pnpm fix:all"
   },
   "devDependencies": {
@@ -62,6 +63,7 @@
     "@swc/helpers": "^0.5.17",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "14.0.0",
+    "@testing-library/user-event": "14.5.1",
     "@types/jest": "29.5.3",
     "@types/jest-axe": "3.5.5",
     "@types/node": "16.4.10",

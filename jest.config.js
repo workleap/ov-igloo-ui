@@ -16,6 +16,7 @@ module.exports = {
     },
     preset: "ts-jest/presets/js-with-babel",
     transformIgnorePatterns: [
-        "node_modules/(?!(@igloo-ui/*|@react-hook/*|@hopper-ui/*)/)"
+        // pnpm stores packages under node_modules/.pnpm/<scope>+<name>@<version>/node_modules/<scope>/<name>
+        "node_modules/(?!(?:\\.pnpm/)?(?:@igloo-ui|@react-hook|@hopper-ui)[+/])"
     ]
 };

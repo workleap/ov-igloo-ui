@@ -7,6 +7,9 @@ packages:
 # packages (same behaviour as Yarn workspaces), without rewriting package.json.
 linkWorkspacePackages: true
 
+# pnpm ignores non-auth settings in .npmrc; keep the repo's "save-exact" behaviour.
+saveExact: true
+
 # LEAPSEC-403: a package from outside Workleap must be at least 7 days old
 # (10080 minutes) before it can be installed.
 minimumReleaseAge: 10080

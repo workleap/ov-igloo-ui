@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build:shared && yarn build:components && yarn doc:build"
+  command = "pnpm build:shared && pnpm build:components && pnpm doc:build"
   publish = "website/.next"
 
 [[plugins]]

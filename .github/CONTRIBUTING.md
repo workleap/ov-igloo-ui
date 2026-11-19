@@ -40,9 +40,9 @@ Scan through our [existing issues](https://github.com/workleap/ov-igloo-ui/issue
 - GitHub Codespaces:
   - [Fork, edit, and preview](https://docs.github.com/en/free-pro-team@latest/github/developing-online-with-codespaces/creating-a-codespace) using [GitHub Codespaces](https://github.com/features/codespaces) without having to install and run the project locally.
 
-2. Install or update to **Node.js v14** or **v16**.
+2. Install the **Node.js** version listed in `.nvmrc`.
 
-3. Install [Yarn](https://yarnpkg.com/).
+3. Install [pnpm](https://pnpm.io/installation), at the version in the `packageManager` field of `package.json`.
 
 4. Create a working branch and start with your changes!
 
@@ -69,7 +69,7 @@ The title type must be one of the following:
 
 When you're finished with the changes, create a pull request, also known as a PR.
 
-- Run `yarn changeset` and follow the steps to generate a changeset file (that needs to be committed with your PR).
+- Run `pnpm changeset` and follow the steps to generate a changeset file (that needs to be committed with your PR).
 - Don't forget to [link PR to issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if you are solving one.
 - Enable the checkbox to [allow maintainer edits](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork) so the branch can be updated for a merge.
 

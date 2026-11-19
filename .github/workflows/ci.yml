@@ -13,83 +13,73 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Commit
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
+
+      # Reads the pnpm version from package.json "packageManager".
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
 
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v7
         with:
           node-version-file: ".nvmrc"
-
-      - name: Cache yarn dependencies
-        uses: actions/cache@v3
-        id: cache-dependencies
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          cache: pnpm
 
       - name: Install Dependencies
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: |
-            yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
   lint:
     runs-on: ubuntu-latest
     needs: install-cache
     steps:
       - name: Checkout Commit
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
 
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v7
         with:
           node-version-file: ".nvmrc"
+          cache: pnpm
 
-      - name: Restore yarn dependencies
-        uses: actions/cache@v3
-        id: cache-dependencies
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Run Eslint
-        run: yarn lint
+        run: pnpm lint
 
       - name: Run Stylelint
-        run: yarn lint:style
+        run: pnpm lint:style
 
   build_and_test:
     runs-on: ubuntu-latest
     needs: install-cache
     steps:
       - name: Checkout Commit
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
 
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v7
         with:
           node-version-file: ".nvmrc"
+          cache: pnpm
 
-      - name: Restore yarn dependencies
-        uses: actions/cache@v3
-        id: cache-dependencies
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Run build
-        run: yarn build
+        run: pnpm build
 
       - name: Run tests
-        run: yarn test
+        run: pnpm test
 
       - name: Run Documentation Storybook
-        run: yarn doc:build-sb
+        run: pnpm doc:build-sb
 
   slack-notification:
     runs-on: ubuntu-latest
