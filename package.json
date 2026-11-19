@@ -7,8 +7,9 @@
     "Franck franck.gaudin@gsoft.com"
   ],
   "license": "Apache-2.0",
+  "packageManager": "pnpm@12.20.0",
   "scripts": {
-    "prebuild": "yarn build:shared",
+    "prebuild": "pnpm build:shared",
     "build": "lerna run build",
     "build:components": "lerna run build --scope=@igloo-ui/* --concurrency=5",
     "build:shared": "lerna run build --scope=@shared/*",
@@ -18,24 +19,19 @@
     "lint:fix": "eslint . --ext .ts,.tsx --fix --quiet",
     "lint:style": "stylelint \"**/*.scss\"",
     "fix:style": "stylelint \"**/*.scss\" --fix",
-    "lint:all": "yarn lint && yarn lint:style",
-    "fix:all": "yarn lint:fix && yarn fix:style",
+    "lint:all": "pnpm lint && pnpm lint:style",
+    "fix:all": "pnpm lint:fix && pnpm fix:style",
     "doc:start": "lerna run dev --scope=docs",
-    "doc:build": "lerna run build --verbose --scope=docs && yarn doc:build-sb",
-    "doc:build-sb": "yarn build-storybook --docs -o ./website/.next/storybook",
-    "dev": "yarn build:shared && yarn build:components && yarn storybook",
+    "doc:build": "lerna run build --verbose --scope=docs && pnpm doc:build-sb",
+    "doc:build-sb": "pnpm build-storybook --docs -o ./website/.next/storybook",
+    "dev": "pnpm build:shared && pnpm build:components && pnpm storybook",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepublish-ci": "yarn build:shared && yarn build:components",
-    "publish-ci": "npx lerna publish from-package -y",
-    "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN --only-changed",
-    "bootstrap": "node utils/bootstrap/component.mjs && npx lerna bootstrap && yarn fix:all"
+    "prepublish-ci": "pnpm build:shared && pnpm build:components",
+    "publish-ci": "lerna publish from-package -y",
+    "chromatic": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN --only-changed",
+    "bootstrap": "node utils/bootstrap/component.mjs && pnpm install && pnpm fix:all"
   },
-  "workspaces": [
-    "packages/*",
-    "shared/*",
-    "website"
-  ],
   "devDependencies": {
     "@swc/helpers": "^0.5.17",
     "@babel/core": "7.22.10",

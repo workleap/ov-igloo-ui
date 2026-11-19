@@ -2,8 +2,7 @@
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "packages": ["packages/*", "shared/*", "website"],
   "version": "independent",
-  "npmClient": "yarn",
-  "useWorkspaces": true,
+  "npmClient": "pnpm",
   "command": {
     "version": {
       "message": "chore(release): publish",

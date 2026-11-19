@@ -5,7 +5,7 @@
   "scripts": {
     "prebuild": "node ./scripts/generate-component-data.mjs",
     "dev": "next dev",
-    "build": "npx next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
