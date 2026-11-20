@@ -17,12 +17,12 @@ on:
 jobs:
     chromatic-deployment:
         runs-on: ubuntu-latest
+        # Chromatic reports PR status through its GitHub app; the job needs no write access.
         permissions:
-          contents: write
-          pull-requests: write
+          contents: read
         steps:
           - name: Checkout Commit
-            uses: actions/checkout@v7
+            uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
             with:
               fetch-depth: 0
 
@@ -31,7 +31,7 @@ jobs:
             uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
 
           - name: Install Node.js
-            uses: actions/setup-node@v7
+            uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
             with:
               node-version-file: ".nvmrc"
               cache: pnpm
@@ -46,7 +46,7 @@ jobs:
             run: pnpm build:components
 
           - name: Publish to Chromatic
-            uses: chromaui/action@v1
+            uses: chromaui/action@c93e0bc3a63aa176e14a75b61a31847cbfdd341c # v1
             with:
               projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
               traceChanged: true
