@@ -1,5 +1,11 @@
 # @igloo-ui/tag-picker
 
+## 0.17.1
+
+### Patch Changes
+
+- 18db00b: Declare runtime dependencies the packages already import: `@hopper-ui/icons-react16` (metric), `@igloo-ui/icons` (stepper, text-editor) and `@igloo-ui/list` (tag-picker).
+
 ## 0.17.0
 
 ### Minor Changes
