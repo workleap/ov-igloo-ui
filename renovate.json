@@ -1,0 +1,6 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["local>workleap/renovate-config", "helpers:pinGitHubActionDigestsToSemver"],
+    "description": "Renovate only updates GitHub Actions. Every action is pinned to a commit hash with its release in a comment. npm is left out: pinning would force exact dependency versions on consumers of the published @igloo-ui packages.",
+    "enabledManagers": ["github-actions"]
+}
