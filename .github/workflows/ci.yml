@@ -87,7 +87,7 @@ jobs:
     steps:
       - name: Send message to Slack
         id: slack
-        uses: slackapi/slack-github-action@007b2c3c751a190b6f0f040e47ed024deaa72844 # v1.23.0
+        uses: slackapi/slack-github-action@fcfb566f8b0aab22203f066d80ca1d7e4b5d05b3 # v1.27.1
         with:
           payload: |
             {
