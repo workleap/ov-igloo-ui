@@ -4,41 +4,157 @@ on:
   push:
     branches: [main]
 
+# Every job declares its own permissions. Only the publish job holds the npm publishing identity
+# (id-token: write), and it builds nothing: it uploads the tarballs made by the pack job.
+permissions: {}
+
 jobs:
-    version:
+    select-mode:
         runs-on: ubuntu-latest
         permissions:
-            id-token: write # required for provenance https://docs.npmjs.com/generating-provenance-statements#publishing-packages-with-provenance-via-github-actions
+            contents: read
+        outputs:
+            mode: ${{ steps.select-mode.outputs.mode }}
+            publish-plan-artifact-id: ${{ steps.select-mode.outputs.publish-plan-artifact-id }}
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+              with:
+                  persist-credentials: false
+
+            # Reads the pnpm version from package.json "packageManager".
+            - name: Install pnpm
+              uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+              with:
+                  run_install: false
+
+            - name: Install Node.js
+              uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+              with:
+                node-version-file: ".nvmrc"
+
+            - name: Install Dependencies
+              run: pnpm install --frozen-lockfile --ignore-scripts
+
+            - name: Select the Changesets mode
+              id: select-mode
+              # "version" when changesets are pending, "publish" when a package version is not on npm yet, "none" otherwise.
+              uses: changesets/action/select-mode@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
+
+    version:
+        needs: select-mode
+        if: needs.select-mode.outputs.mode == 'version'
+        runs-on: ubuntu-latest
+        permissions:
             contents: write
             pull-requests: write
 
         steps:
             - name: Checkout
               uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+              with:
+                  fetch-depth: 0
+                  persist-credentials: false
 
-            # Reads the pnpm version from package.json "packageManager".
             - name: Install pnpm
               uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+              with:
+                  run_install: false
 
             - name: Install Node.js
               uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
-              # No dependency cache here: this job holds the npm token, and Actions caches on
-              # main can be written by other workflows (cache poisoning). Install fresh instead.
               with:
                 node-version-file: ".nvmrc"
 
             - name: Install Dependencies
-              run: pnpm install --frozen-lockfile
+              run: pnpm install --frozen-lockfile --ignore-scripts
 
-            - name: Create release Pull Request or publish to NPM
-              uses: changesets/action@a45c4d594aa4e2c509dc14a9f2b3b67ba3780d0d # v1.9.0
+            - name: Create release Pull Request
+              uses: changesets/action/version@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
               with:
-                  commit: "ci(changesets): version packages"
-                  title: "Changeset: New Version"
+                  commit-message: "ci(changesets): version packages"
+                  pr-title: "Changeset: New Version"
                   # Also refreshes pnpm-lock.yaml, since bumped internal ranges are recorded in it.
-                  version: pnpm changeset:version
-                  publish: pnpm publish-ci
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  NPM_TOKEN: ${{ secrets.WORKLEAP_NPM_TOKEN }}
-                  NODE_AUTH_TOKEN: ${{ secrets.WORKLEAP_NPM_TOKEN }}
+                  script: pnpm changeset:version
+
+    pack:
+        needs: select-mode
+        if: needs.select-mode.outputs.mode == 'publish'
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+        outputs:
+            pack-dir-artifact-id: ${{ steps.pack.outputs.pack-dir-artifact-id }}
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+              with:
+                  persist-credentials: false
+
+            - name: Install pnpm
+              uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+              with:
+                  run_install: false
+
+            # Everything this job installs and builds comes from this commit and the lockfile: no
+            # dependency cache is restored, and no lifecycle script runs during the install.
+            # Actions caches on main can be written by other workflows (cache poisoning).
+            - name: Install Node.js
+              uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+              with:
+                node-version-file: ".nvmrc"
+
+            - name: Install Dependencies
+              run: pnpm install --frozen-lockfile --ignore-scripts
+
+            - name: Build packages
+              run: pnpm build:shared && pnpm build:components
+
+            - name: Pack packages
+              id: pack
+              uses: changesets/action/pack@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
+              with:
+                  publish-plan-artifact-id: ${{ needs.select-mode.outputs.publish-plan-artifact-id }}
+
+    publish:
+        needs: pack
+        runs-on: ubuntu-latest
+        # The npm-publish environment only accepts the main branch, and the npm trusted publisher of each
+        # package requires it: a workflow run from another branch cannot publish.
+        environment: npm-publish
+        permissions:
+            id-token: write # OIDC for npm Trusted Publishing
+            contents: read
+
+        # Never add a step to this job: every step here can request the npm publishing token.
+        # The install only provides @changesets/cli, which the publish action requires. Never restore a
+        # cache here (no `cache` input on the Node setup) and never let pnpm/action-setup install
+        # (`run_install: false`): the CLI must come from the lockfile, and no lifecycle script may run.
+        steps:
+            - name: Checkout
+              uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+              with:
+                  persist-credentials: false
+
+            - name: Install pnpm
+              uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+              with:
+                  run_install: false
+
+            - name: Install Node.js
+              uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+              with:
+                node-version-file: ".nvmrc"
+
+            - name: Install Dependencies
+              run: pnpm install --frozen-lockfile --ignore-scripts
+
+            - name: Publish to NPM
+              uses: changesets/action/publish@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
+              with:
+                  pack-dir-artifact-id: ${{ needs.pack.outputs.pack-dir-artifact-id }}
+                  # The repository has never had release tags or GitHub releases; both would need contents: write.
+                  create-github-releases: false
+                  push-git-tags: false
