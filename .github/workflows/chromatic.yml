@@ -46,7 +46,7 @@ jobs:
             run: pnpm build:components
 
           - name: Publish to Chromatic
-            uses: chromaui/action@b46fae7df99a74cc2201b00cb59ec498c3346530 # v18.15.0
+            uses: chromaui/action@9cb4d65a86fe1c4c67a76a8d90f35a51a118e55f # v18.15.1
             with:
               projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
               traceChanged: true
